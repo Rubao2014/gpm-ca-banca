@@ -21,7 +21,7 @@
             android:layout_weight="20"
             android:fontFamily="arial"
             android:paddingTop="20dp"
-            android:text="Secretaria de Ciência e Tecnologia"
+            android:text="Secretaria Municipal de Gestão SEMGE"
             android:textAlignment="center"
             android:textSize="14sp"
             android:textStyle="bold" />
@@ -44,7 +44,7 @@
         <ImageView
             android:layout_width="@dimen/tamanho_logo_acre_horizontal"
             android:layout_height="@dimen/tamanho_logo_acre_vertical"
-            android:src="@drawable/logogovernoacre"/>
+            android:src="@drawable/prefeitura"/>
 
     </LinearLayout>
 
