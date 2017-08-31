@@ -1,0 +1,36 @@
+{
+    "arquivos_ignorar" :
+    [
+        "R.java",
+        "ActivityBase.java",
+        "FragmentBase.java",
+        "DialogAlerta.java",
+        "LogTrace.java",
+        "MascaraCampos.java",
+        "OnDialogAlertaListener.java"
+    ],
+    "pastas_ignorar" :
+    [
+    ],
+    "somente_arquivos" :
+    [
+    ],
+    "classe_metodo_ignorar_tratamento_erro" :
+    [
+      "FrmSplash.onCreate",
+      "FrmSplash.onRequestPermissionsResult",
+      "FrmSplash.setaPermissoesAplicacao",
+      "Apoio.copiarArquivosDiretorio",
+      "Apoio.criarProgressDialog",
+      "Apoio.closeStream",
+      "Apoio.parseData",
+      "Apoio.criaDiretorios",
+      "Apoio.localErro",
+      "Apoio.localErroDialog",
+      "Apoio.pathCombine",
+      "Apoio.chmod",
+      "Apoio.getMsgErr",
+      "InfraEstruturaApp.criaDiretorios",
+      "InfraEstruturaApp.processaArqCnf"
+    ]
+}

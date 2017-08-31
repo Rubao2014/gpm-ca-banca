@@ -1,0 +1,572 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/branco"
+    android:orientation="vertical">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!-- LABEL MATRICULA -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="left"
+                    android:textSize="11dp"
+                    android:textColor="@color/colorAccent"
+                    android:text="@string/hint_matricula" />
+
+                <TextView
+                    android:id="@+id/lblMatricula"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:gravity="left"
+                    android:textSize="18dp"
+                    android:textColor="@color/preto" />
+
+            </LinearLayout>
+
+            <!-- LABEL SITUACAO -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="left"
+                    android:textSize="11dp"
+                    android:textColor="@color/colorAccent"
+                    android:text="@string/hint_situacao" />
+
+                <TextView
+                    android:id="@+id/lblSituacao"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:gravity="left"
+                    android:textSize="18dp"
+                    android:textColor="@color/preto" />
+
+            </LinearLayout>
+
+            <!-- LABEL VINCULO -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="left"
+                    android:textSize="11dp"
+                    android:textColor="@color/colorAccent"
+                    android:text="@string/hint_vinculo" />
+
+                <TextView
+                    android:id="@+id/lblVinculo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:gravity="left"
+                    android:textSize="18dp"
+                    android:textColor="@color/preto" />
+
+            </LinearLayout>
+
+            <!-- LABEL ORGAO PAGAMENTO -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="left"
+                    android:textSize="11dp"
+                    android:textColor="@color/colorAccent"
+                    android:text="@string/hint_orgao_pagamento" />
+
+                <TextView
+                    android:id="@+id/lblOrgaoPagamento"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:gravity="left"
+                    android:textSize="18dp"
+                    android:textColor="@color/preto" />
+
+            </LinearLayout>
+
+            <!-- LABEL MATRICULA 2-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="left"
+                    android:textSize="11dp"
+                    android:textColor="@color/colorAccent"
+                    android:text="@string/hint_matricula" />
+
+                <TextView
+                    android:id="@+id/lblMatricula2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:gravity="left"
+                    android:textSize="18dp"
+                    android:textColor="@color/preto" />
+
+            </LinearLayout>
+
+            <!-- LABEL DOC. ADMISSAO -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="left"
+                    android:textSize="11dp"
+                    android:textColor="@color/colorAccent"
+                    android:text="@string/hint_doc_admissao" />
+
+                <TextView
+                    android:id="@+id/lblDocAdmissao"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:gravity="left"
+                    android:textSize="18dp"
+                    android:textColor="@color/preto" />
+
+            </LinearLayout>
+
+            <!-- LABEL DOC. ADMISSAO NUMERO-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="left"
+                    android:textSize="11dp"
+                    android:textColor="@color/colorAccent"
+                    android:text="@string/hint_doc_admissao_numero" />
+
+                <TextView
+                    android:id="@+id/lblDocAdmissaoNumero"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:gravity="left"
+                    android:textSize="18dp"
+                    android:textColor="@color/preto" />
+
+            </LinearLayout>
+
+            <!-- LABEL DOC. ADMISSAO DATA-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="left"
+                    android:textSize="11dp"
+                    android:textColor="@color/colorAccent"
+                    android:text="@string/hint_doc_admissao_data" />
+
+                <TextView
+                    android:id="@+id/lblDocAdmissaoData"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:gravity="left"
+                    android:textSize="18dp"
+                    android:textColor="@color/preto" />
+
+            </LinearLayout>
+
+            <!-- LABEL DATA ADMISSAO-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="left"
+                    android:textSize="11dp"
+                    android:textColor="@color/colorAccent"
+                    android:text="@string/hint_data_admissao" />
+
+                <TextView
+                    android:id="@+id/lblDataAdmissao"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:gravity="left"
+                    android:textSize="18dp"
+                    android:textColor="@color/preto" />
+
+            </LinearLayout>
+
+            <!-- LABEL CONCURSADO-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="left"
+                    android:textSize="11dp"
+                    android:textColor="@color/colorAccent"
+                    android:text="@string/hint_concursado" />
+
+                <TextView
+                    android:id="@+id/lblConcursado"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:gravity="left"
+                    android:textSize="18dp"
+                    android:textColor="@color/preto" />
+
+            </LinearLayout>
+
+            <!-- LABEL SITUACAO 2-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="left"
+                    android:textSize="11dp"
+                    android:textColor="@color/colorAccent"
+                    android:text="@string/hint_situacao" />
+
+                <TextView
+                    android:id="@+id/lblSituacao2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:gravity="left"
+                    android:textSize="18dp"
+                    android:textColor="@color/preto" />
+
+            </LinearLayout>
+
+            <!-- LABEL CARGA HORARIA-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="left"
+                    android:textSize="11dp"
+                    android:textColor="@color/colorAccent"
+                    android:text="@string/hint_carga_horaria" />
+
+                <TextView
+                    android:id="@+id/lblCargaHoraria"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:gravity="left"
+                    android:textSize="18dp"
+                    android:textColor="@color/preto" />
+
+            </LinearLayout>
+
+            <!-- LABEL VINCULO 2-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="left"
+                    android:textSize="11dp"
+                    android:textColor="@color/colorAccent"
+                    android:text="@string/hint_vinculo" />
+
+                <TextView
+                    android:id="@+id/lblVinculo2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:gravity="left"
+                    android:textSize="18dp"
+                    android:textColor="@color/preto" />
+
+            </LinearLayout>
+
+            <!-- LABEL CIDADE-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="left"
+                    android:textSize="11dp"
+                    android:textColor="@color/colorAccent"
+                    android:text="@string/hint_cidade" />
+
+                <TextView
+                    android:id="@+id/lblCidade"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:gravity="left"
+                    android:textSize="18dp"
+                    android:textColor="@color/preto" />
+
+            </LinearLayout>
+
+            <!-- LABEL ORGAO ORIGEM -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="left"
+                    android:textSize="11dp"
+                    android:textColor="@color/colorAccent"
+                    android:text="@string/hint_orgao_origem" />
+
+                <TextView
+                    android:id="@+id/lblOrgaoOrigem"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:gravity="left"
+                    android:textSize="18dp"
+                    android:textColor="@color/preto" />
+
+            </LinearLayout>
+
+            <!-- LABEL ORGAO PAGAMENTO 2-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="left"
+                    android:textSize="11dp"
+                    android:textColor="@color/colorAccent"
+                    android:text="@string/hint_orgao_pagamento" />
+
+                <TextView
+                    android:id="@+id/lblOrgaoPagamento2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:gravity="left"
+                    android:textSize="18dp"
+                    android:textColor="@color/preto" />
+
+            </LinearLayout>
+
+            <!-- LABEL CARGO-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="left"
+                    android:textSize="11dp"
+                    android:textColor="@color/colorAccent"
+                    android:text="@string/hint_cargo" />
+
+                <TextView
+                    android:id="@+id/lblCargo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:gravity="left"
+                    android:textSize="18dp"
+                    android:textColor="@color/preto" />
+
+            </LinearLayout>
+
+            <!-- LABEL ORGAO LOTACAO -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="left"
+                    android:textSize="11dp"
+                    android:textColor="@color/colorAccent"
+                    android:text="@string/hint_orgao_lotacao" />
+
+                <TextView
+                    android:id="@+id/lblOrgaoLotacao"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:gravity="left"
+                    android:textSize="18dp"
+                    android:textColor="@color/preto" />
+
+            </LinearLayout>
+
+            <!-- LABEL SETOR LOTACAO -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="left"
+                    android:textSize="11dp"
+                    android:textColor="@color/colorAccent"
+                    android:text="@string/hint_setor_lotacao" />
+
+                <TextView
+                    android:id="@+id/lblSetorLotacao"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:gravity="left"
+                    android:textSize="18dp"
+                    android:textColor="@color/preto" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>

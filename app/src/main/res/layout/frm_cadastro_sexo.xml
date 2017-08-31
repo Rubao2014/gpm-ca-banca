@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/branco"
+    android:orientation="vertical">
+
+    <!-- TOOLBAR DA TELA -->
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        style="@style/AppToolbar"
+        app:title="@string/toolbar_cadastre_se"/>
+
+    <!-- LINEAR PRINCIPAL DA TELA -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/espaco_tela"
+        android:paddingRight="@dimen/espaco_tela"
+        android:orientation="vertical">
+
+        <!--  LINEAR COM TEXTVIEW -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/tamanho_zero"
+            android:layout_weight="12"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <!-- TEXTVIEW TITULO  -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/tamanho_label_clique"
+                android:layout_marginTop="15dp"
+                android:gravity="center_vertical"
+                style="@style/TextoTituloTelas"
+                android:text="@string/label_cadastro_sexo_titulo"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/tamanho_zero"
+            android:layout_weight="3"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/tamanho_faixa"
+                android:layout_marginRight="30dp"
+                android:background="@color/colorPrimary" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/tamanho_faixa"
+                android:layout_marginLeft="30dp"
+                android:background="@color/colorPrimaryDark" />
+
+        </LinearLayout>
+
+        <!--  LINEAR PRINCIPAL DA TELA  -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/tamanho_zero"
+            android:layout_weight="70"
+            android:orientation="vertical"
+            android:gravity="center_horizontal|top">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:id="@+id/lnlSexoMasculino"
+                    android:layout_width="@dimen/tamanho_zero"
+                    android:layout_height="match_parent"
+                    android:layout_weight="50"
+                    android:layout_marginLeft="15dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/masculino"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lnlSexoFeminino"
+                    android:layout_width="@dimen/tamanho_zero"
+                    android:layout_height="match_parent"
+                    android:layout_weight="50"
+                    android:layout_marginRight="15dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/feminino"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:layout_width="@dimen/tamanho_zero"
+                    android:layout_height="match_parent"
+                    android:layout_weight="50"
+                    android:layout_marginLeft="15dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imgMasculino"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/checked"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="@dimen/tamanho_zero"
+                    android:layout_height="match_parent"
+                    android:layout_weight="50"
+                    android:layout_marginRight="15dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imgFeminino"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/checked"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/tamanho_zero"
+            android:layout_weight="15"
+            android:orientation="vertical"
+            android:gravity="center_horizontal|bottom">
+
+            <Button
+                android:id="@+id/cmdContinuar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/tamanho_botao"
+                style="@style/BotoesTelas"
+                android:layout_marginBottom="15dp"
+                android:text="@string/botao_cadastro_nome_continuar"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

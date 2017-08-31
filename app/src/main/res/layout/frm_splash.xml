@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/branco"
+    android:orientation="vertical">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tamanho_zero"
+        android:layout_weight="20"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="@dimen/tamanho_logo_sect_horizontal"
+            android:layout_height="wrap_content"
+            android:layout_weight="20"
+            android:fontFamily="arial"
+            android:paddingTop="20dp"
+            android:text="Secretaria de Ciência e Tecnologia"
+            android:textAlignment="center"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+       <!-- <ImageView
+            android:layout_width="@dimen/tamanho_logo_sect_horizontal"
+            android:layout_height="@dimen/tamanho_logo_sect_vertical"
+            android:src="@drawable/logoatipe"
+            android:id="@+id/imageView" />-->
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tamanho_zero"
+        android:layout_weight="60"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="@dimen/tamanho_logo_acre_horizontal"
+            android:layout_height="@dimen/tamanho_logo_acre_vertical"
+            android:src="@drawable/logogovernoacre"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tamanho_zero"
+        android:layout_weight="20"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="@dimen/tamanho_logo_ca_horizontal"
+            android:layout_height="@dimen/tamanho_logo_ca_vertical"
+            android:src="@mipmap/logoca"/>
+
+    </LinearLayout>
+
+</LinearLayout>

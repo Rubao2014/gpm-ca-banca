@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/branco"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        style="@style/AppToolbar"
+        app:title="@string/toolbar_meus_dados"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/espaco_tela"
+        android:paddingRight="@dimen/espaco_tela"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/tamanho_zero"
+            android:layout_weight="12"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/tamanho_label_clique"
+                android:layout_marginTop="15dp"
+                android:gravity="center_vertical"
+                style="@style/TextoTituloTelas"
+                android:text="@string/titulo_meu_perfil"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/tamanho_zero"
+            android:layout_weight="3"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/tamanho_faixa"
+                android:layout_marginRight="30dp"
+                android:background="@color/colorPrimary" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/tamanho_faixa"
+                android:layout_marginLeft="30dp"
+                android:background="@color/colorPrimaryDark" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/tamanho_zero"
+            android:layout_weight="70"
+            android:orientation="vertical"
+            android:gravity="center_horizontal|top">
+
+            <!-- EDITTEXT Nova Senha -->
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/inputNovaSenha"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/txtNovaSenha"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:maxLength="30"
+                    android:inputType="textPassword"
+                    android:hint="@string/hint_meus_dados_nova_senha"
+                    android:selectAllOnFocus="true" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <!-- EDITTEXT Redigitar nova senha -->
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/inputConfirmarSenha"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/txtConfirmarSenha"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:maxLength="30"
+                    android:inputType="textPassword"
+                    android:hint="@string/hint_meus_dados_redigite_senha"
+                    android:selectAllOnFocus="true" />
+
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/tamanho_zero"
+            android:layout_weight="15"
+            android:orientation="vertical"
+            android:gravity="center_horizontal|bottom">
+
+            <Button
+                android:id="@+id/cmdEnviar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/tamanho_botao"
+                android:layout_marginBottom="15dp"
+                style="@style/BotoesTelas"
+                android:text="@string/botao_meus_dados_enviar"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+
+    <TextView
+        android:text="DETRAN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtSigla"
+        android:textSize="12sp"
+        tools:textColor="?android:attr/textColorSecondaryInverseNoDisable"
+        android:layout_alignTop="@+id/imageViewStatus"
+        android:layout_alignStart="@+id/txtNomeServico" />
+
+    <TextView
+        android:text="Departamento Estadual de Trânsito"
+        android:layout_marginStart="5dp"
+        android:id="@+id/txtNomeServico"
+        android:gravity="center_vertical"
+        android:layout_below="@+id/txtSigla"
+        android:layout_toEndOf="@+id/imageViewStatus"
+        android:layout_alignBottom="@+id/imageViewStatus"
+        android:layout_width="285dp"
+        android:layout_height="80dp" />
+
+    <TextView
+        android:text=" "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView9"
+        android:textSize="8sp"
+        tools:textColor="?android:attr/textColorSecondaryInverseNoDisable"
+        android:layout_above="@+id/txtNomeServico"
+         />
+
+    <LinearLayout
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:orientation="vertical"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="6dp"
+        android:id="@+id/imageViewStatus"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            app:srcCompat="@drawable/check_mark"/>
+
+    </LinearLayout>
+
+
+
+
+    <TextView
+        android:text="CETRAN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtUnidade"
+        android:gravity="center_vertical"
+        android:layout_alignTop="@+id/txtSigla"
+        android:layout_alignEnd="@+id/txtNomeServico" />
+
+</RelativeLayout>

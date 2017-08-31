@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/branco"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        style="@style/AppToolbar"
+        app:title=" "/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/espaco_tela"
+        android:paddingRight="@dimen/espaco_tela"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/tamanho_zero"
+            android:layout_weight="12"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/lblTituloTela"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/tamanho_label_clique"
+                android:layout_marginTop="15dp"
+                android:gravity="center_vertical"
+                style="@style/TextoTituloTelas"
+                android:text="@string/label_sefazdae_boleto_sucesso"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/tamanho_zero"
+            android:layout_weight="3"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/tamanho_faixa"
+                android:layout_marginRight="30dp"
+                android:background="@color/colorPrimary" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/tamanho_faixa"
+                android:layout_marginLeft="30dp"
+                android:background="@color/colorPrimaryDark" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llBoleto"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/tamanho_zero"
+            android:layout_weight="120"
+            android:orientation="vertical"
+            android:gravity="center_horizontal|top"
+            android:weightSum="1">
+
+            <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/cvBoleto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="horizontal"
+                card_view:cardCornerRadius="5sp"
+                card_view:cardElevation="5sp"
+                card_view:contentPadding="16dp">
+
+
+                <LinearLayout
+                    android:id="@+id/llytopo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imgStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="0dp"
+                        android:src="@mipmap/daetopo" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TableLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical">
+
+                            <TableRow>
+                                <!-- Razao Social -->
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:text="@string/label_sefazdae_razao_social_contribuinte"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textSize="14dp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/txtRazaoSocialBoleto"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:text="nome da empresa"
+                                    android:textSize="14dp" />
+                            </TableRow>
+
+                            <TableRow>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:text="@string/label_sefazdae_mensagem"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textSize="14dp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/txtMensagemBoleto"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:text="mensagem"
+                                    android:textSize="14dp" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:text="@string/label_sefazdae_codigo_receita_tributaria"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textSize="14dp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/txtCodigoReceitaBoleto"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:text="código receita"
+                                    android:textSize="14dp" />
+                            </TableRow>
+
+                            <TableRow>
+
+                                <TextView
+                                    android:id="@+id/txtCodigoBarrasBoleto"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="3dp"
+                                    android:layout_span="3"
+                                    android:paddingTop="10dp"
+                                    android:text="@string/label_sefazdae_boleto_barcode_sample"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold" />
+                            </TableRow>
+
+                            <TableRow>
+
+                                <ImageView
+                                    android:id="@+id/imageView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="100dp"
+                                    android:layout_span="2"
+                                    android:layout_weight="0.56"
+                                    android:paddingTop="10dp"
+                                    android:scaleType="fitXY"
+                                    app:srcCompat="@mipmap/carta_servicos" />
+
+
+                            </TableRow>
+
+                        </TableLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+            <TextView
+                android:id="@+id/txtMensagemBoletoRetornoSefaz"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginTop="20dp"
+                style="@style/TextoTelas"
+                android:text="@string/label_sefazdae_boleto_mensagem_retorno_sefaz"/>
+
+            <TextView
+                android:id="@+id/lblMensagemTela"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginTop="20dp"
+                style="@style/TextoTelas"
+                android:text="@string/label_sefazdae_boleto_mensagem_rodape"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/tamanho_zero"
+            android:layout_weight="25"
+            android:orientation="vertical"
+            android:gravity="center_horizontal|bottom">
+
+            <Button
+                android:id="@+id/cmdFinalizar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/tamanho_botao"
+                style="@style/BotoesTelas"
+                android:layout_marginBottom="15dp"
+                android:text="@string/botao_cadastro_finalizado_continuar"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

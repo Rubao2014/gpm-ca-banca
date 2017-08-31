@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/coordinatorLayoutMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/branco"
+        android:paddingLeft="@dimen/espaco_tela"
+        android:paddingRight="@dimen/espaco_tela"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/tamanho_zero"
+            android:layout_weight="25"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/logogpmcolorida" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/tamanho_zero"
+            android:layout_weight="75"
+            android:orientation="vertical"
+            android:gravity="center_horizontal|top">
+
+            <!-- EDITTEXT EMAIL -->
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/inputEmail"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/txtEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:maxLength="150"
+                    android:inputType="textEmailAddress"
+                    android:selectAllOnFocus="true"
+                    android:hint="@string/hint_email" />
+            </android.support.design.widget.TextInputLayout>
+
+            <!-- EDITTEXT SENHA -->
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/inputSenha"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/txtSenha"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:maxLength="30"
+                    android:inputType="textPassword"
+                    android:selectAllOnFocus="true"
+                    android:hint="@string/hint_senha" />
+            </android.support.design.widget.TextInputLayout>
+
+            <Button
+                android:id="@+id/cmdEntrar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/tamanho_botao"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                style="@style/BotoesTelas"
+                android:text="@string/botao_entrar"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    style="@style/TextoTelas"
+                    android:text="@string/label_manter_conectado"/>
+
+                <Switch
+                    android:id="@+id/switchManterConectado"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_height="@dimen/tamanho_switch"
+                    android:switchMinWidth="@dimen/largura_minima_switch"
+                    android:textOn=" "
+                    android:textOff=" "/>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/cmdRegistrar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/tamanho_botao"
+                android:layout_marginTop="10dp"
+                style="@style/BotoesTelas"
+                android:text="@string/botao_registrar"/>
+
+            <TextView
+                android:id="@+id/lblEntrarMesmoAssim"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/tamanho_label_clique"
+                android:layout_marginTop="15dp"
+                android:gravity="center_vertical"
+                android:textColor="@color/azul_link"
+                android:text="@string/label_entrar_mesmo_assim"/>
+
+            <TextView
+                android:id="@+id/lblEsqueciMinhaSenha"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/tamanho_label_clique"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical"
+                android:textColor="@color/azul_link"
+                android:text="@string/label_esqueci_minha_senha"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>

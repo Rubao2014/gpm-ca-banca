@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/coordinatorLayoutMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/branco"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            style="@style/AppToolbar"
+            app:title="@string/toolbar_login"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/espaco_tela"
+            android:paddingRight="@dimen/espaco_tela"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/tamanho_zero"
+                android:layout_weight="25"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/logoca" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/tamanho_zero"
+                android:layout_weight="60"
+                android:orientation="vertical"
+                android:gravity="center_horizontal|top">
+
+                <!-- EDITTEXT EMAIL -->
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/inputEmail"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/txtEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:maxLength="150"
+                        android:inputType="textEmailAddress"
+                        android:selectAllOnFocus="true"
+                        android:hint="@string/hint_email" />
+                </android.support.design.widget.TextInputLayout>
+
+                <!-- EDITTEXT SENHA -->
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/inputSenha"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/txtSenha"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:maxLength="30"
+                        android:inputType="textPassword"
+                        android:selectAllOnFocus="true"
+                        android:hint="@string/hint_senha" />
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/tamanho_zero"
+                android:layout_weight="15"
+                android:orientation="vertical"
+                android:gravity="center_horizontal|bottom">
+
+                <Button
+                    android:id="@+id/cmdEntrar"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/tamanho_botao"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    style="@style/BotoesTelas"
+                    android:text="@string/botao_entrar"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>

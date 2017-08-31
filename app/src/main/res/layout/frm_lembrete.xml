@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/coordinatorLayoutLembrete"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/branco"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            style="@style/AppToolbar"
+            app:title=""/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/espaco_tela"
+            android:paddingRight="@dimen/espaco_tela"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/tamanho_zero"
+                android:layout_weight="12"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/tamanho_label_clique"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center_vertical"
+                    style="@style/TextoTituloTelas"
+                    android:text="@string/label_lembrete_titulo"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/tamanho_zero"
+                android:layout_weight="3"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/tamanho_faixa"
+                    android:layout_marginRight="30dp"
+                    android:background="@color/colorPrimary" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/tamanho_faixa"
+                    android:layout_marginLeft="30dp"
+                    android:background="@color/colorPrimaryDark" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/tamanho_zero"
+                android:layout_weight="50"
+                android:orientation="vertical"
+                android:gravity="center_horizontal|top">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    style="@style/TextoTelas"
+                    android:text="@string/label_lembrete_mensagem"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/tamanho_zero"
+                android:layout_weight="35"
+                android:orientation="vertical"
+                android:gravity="center_horizontal|bottom">
+
+                <Button
+                    android:id="@+id/cmdCriaConta"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/tamanho_botao"
+                    style="@style/BotoesTelas"
+                    android:text="@string/botao_lembrete_criar_conta"/>
+
+                <Button
+                    android:id="@+id/cmdEntrarMesmoAssim"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/tamanho_botao"
+                    android:layout_marginTop="5dp"
+                    style="@style/BotoesTelas"
+                    android:text="@string/botao_lembrete_entrar"/>
+
+                <Button
+                    android:id="@+id/cmdPossuiConta"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/tamanho_botao"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="15dp"
+                    style="@style/BotoesTelas"
+                    android:text="@string/botao_lembrete_possui_conta"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>

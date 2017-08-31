@@ -1,0 +1,26 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="tamanho_zero">0dp</dimen>
+    <dimen name="tamanho_botao">50dp</dimen>
+    <dimen name="espaco_tela">15dp</dimen>
+    <dimen name="tamanho_switch">8dp</dimen>
+    <dimen name="tamanho_edittext">30dp</dimen>
+    <dimen name="largura_minima_switch">20dp</dimen>
+    <dimen name="tamanho_label_clique">30dp</dimen>
+    <dimen name="tamanho_texto_titulo_tela">20dp</dimen>
+    <dimen name="tamanho_faixa">3dp</dimen>
+    <dimen name="tamanho_logo_acre_horizontal">280dp</dimen>
+    <dimen name="tamanho_logo_acre_vertical">217dp</dimen>
+    <dimen name="tamanho_logo_sect_horizontal">200dp</dimen>
+    <dimen name="tamanho_logo_sect_vertical">34dp</dimen>
+    <dimen name="tamanho_logo_ca_horizontal">40dp</dimen>
+    <dimen name="tamanho_logo_ca_vertical">33dp</dimen>
+    <dimen name="tamanho_linha_menu">1dp</dimen>
+    <dimen name="tamanho_icone_menu">20dp</dimen>
+    <dimen name="tamanho_texto_menu">14dp</dimen>
+    <dimen name="tamanho_texto_itens_dashboard">12dp</dimen>
+    <dimen name="tamanho_menu">280dp</dimen>
+    <dimen name="tamanho_linha">1dp</dimen>
+    <dimen name="tamanho_foto">100dp</dimen>
+    <dimen name="tamanho_excluir">18dp</dimen>
+</resources>

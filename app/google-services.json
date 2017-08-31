@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "703059817603",
+    "firebase_url": "https://piaui-na-palma-da-mao.firebaseio.com",
+    "project_id": "piaui-na-palma-da-mao",
+    "storage_bucket": "piaui-na-palma-da-mao.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:703059817603:android:195e27a484fb7a45",
+        "android_client_info": {
+          "package_name": "br.gov.pi.ati.ppm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "703059817603-e109f05suhk05cut9bou3soeljrcm1oi.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "br.gov.pi.ati.ppm",
+            "certificate_hash": "1d5a43bab292959e05457be93e0b04efaf0d8fe0"
+          }
+        },
+        {
+          "client_id": "703059817603-88jputs791476tc1lidnkkl0j46tqtdt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCrg0UdI2rC174xm50YAH5ik3I2jEsHnRI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "703059817603-88jputs791476tc1lidnkkl0j46tqtdt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

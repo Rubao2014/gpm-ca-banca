@@ -1,0 +1,364 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            style="@style/AppToolbar"
+            app:title="@string/toolbar_cadastrar_dependentes"/>
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="@dimen/espaco_tela"
+                android:paddingRight="@dimen/espaco_tela"
+                android:orientation="vertical">
+
+                <!-- EDITTEXT NOME -->
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/inputNomeDependente"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/txtNomeDependente"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:maxLength="100"
+                        android:inputType="text"
+                        android:selectAllOnFocus="true"
+                        android:hint="@string/hint_nome" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <!-- SPINNER SEXO-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginBottom="2dp"
+                        android:gravity="left"
+                        android:textSize="11dp"
+                        android:textColor="@color/colorAccent"
+                        android:text="@string/hint_sexo" />
+
+                    <Spinner
+                        android:id="@+id/cboSexoDependente"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:theme="@style/ThemeSpinner"
+                        style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                        android:popupBackground="@color/branco"
+                        android:gravity="center" />
+
+                </LinearLayout>
+
+                <!-- EDITTEXT DATA DE NASCIMENTO -->
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/inputDataNascimentoDependente"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/txtDataNascimentoDependente"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:maxLength="10"
+                        android:inputType="number"
+                        android:selectAllOnFocus="true"
+                        android:hint="@string/hint_data_nascimento" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <!-- EDITTEXT CPF DO DEPENDENTE -->
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/inputCPFDependente"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/txtCPFDependente"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:maxLength="14"
+                        android:inputType="number"
+                        android:selectAllOnFocus="true"
+                        android:hint="@string/hint_cpf" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <!-- SPINNER UNIVERSITÁRIO-->]
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginBottom="2dp"
+                        android:gravity="left"
+                        android:textSize="11dp"
+                        android:textColor="@color/colorAccent"
+                        android:text="@string/hint_universitario" />
+
+                    <Spinner
+                        android:id="@+id/cboUniversitario"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:theme="@style/ThemeSpinner"
+                        style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                        android:popupBackground="@color/branco"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/lblErroUniversitario"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:text="@string/msg_cadastro_novos_dependentes_universitario_nao_selecionado"
+                        android:visibility="gone"
+                        android:textSize="11dp"
+                        android:textColor="@color/vermelho"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginTop="3dp" />
+
+                </LinearLayout>
+
+                <!-- SPINNER TIPO DE DEPENDENCIA-->]
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginBottom="2dp"
+                        android:gravity="left"
+                        android:textSize="11dp"
+                        android:textColor="@color/colorAccent"
+                        android:text="@string/hint_tipo_dependente" />
+
+                    <Spinner
+                        android:id="@+id/cboTipoDependente"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:theme="@style/ThemeSpinner"
+                        style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                        android:popupBackground="@color/branco"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/lblErroTipoDependente"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:text="@string/msg_cadastro_novos_dependentes_tipo_nao_selecionado"
+                        android:visibility="gone"
+                        android:textSize="11dp"
+                        android:textColor="@color/vermelho"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginTop="3dp" />
+
+                </LinearLayout>
+
+                <!-- EDITTEXT NATURALIDADE -->
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/inputNaturalidadeDependente"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/txtNaturalidadeDependente"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:maxLength="50"
+                        android:inputType="text"
+                        android:selectAllOnFocus="true"
+                        android:hint="@string/hint_naturalidade" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <!-- EDITTEXT NACIONALIDADE -->
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/inputNacionalidadeDependente"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/txtNacionalidadeDependente"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:maxLength="50"
+                        android:inputType="text"
+                        android:selectAllOnFocus="true"
+                        android:hint="@string/hint_nacionalidade" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <!-- SPINNER DEPEND. IR-->]
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginBottom="2dp"
+                        android:gravity="left"
+                        android:textSize="11dp"
+                        android:textColor="@color/colorAccent"
+                        android:text="@string/hint_depend_ir" />
+
+                    <Spinner
+                        android:id="@+id/cboDependIR"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:theme="@style/ThemeSpinner"
+                        style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                        android:popupBackground="@color/branco"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/lblErroDependIR"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:text="@string/msg_cadastro_novos_dependentes_ir_nao_selecionado"
+                        android:visibility="gone"
+                        android:textSize="11dp"
+                        android:textColor="@color/vermelho"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginTop="3dp" />
+
+                </LinearLayout>
+
+                <!-- SPINNER DEPEND. SF-->]
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginBottom="2dp"
+                        android:gravity="left"
+                        android:textSize="11dp"
+                        android:textColor="@color/colorAccent"
+                        android:text="@string/hint_depend_sf" />
+
+                    <Spinner
+                        android:id="@+id/cboDependSF"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:theme="@style/ThemeSpinner"
+                        style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                        android:popupBackground="@color/branco"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/lblErroDependSF"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:text="@string/msg_cadastro_novos_dependentes_sf_nao_selecionado"
+                        android:visibility="gone"
+                        android:textSize="11dp"
+                        android:textColor="@color/vermelho"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginTop="3dp" />
+
+                </LinearLayout>
+
+                <!-- SPINNER DEPEND. ASS. MÉDICA-->]
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginBottom="2dp"
+                        android:gravity="left"
+                        android:textSize="11dp"
+                        android:textColor="@color/colorAccent"
+                        android:text="@string/hint_depend_medica" />
+
+                    <Spinner
+                        android:id="@+id/cboDependAssMedica"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:theme="@style/ThemeSpinner"
+                        style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                        android:popupBackground="@color/branco"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/lblErroDependAssMedica"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:text="@string/msg_cadastro_novos_dependentes_assistencia_nao_selecionado"
+                        android:visibility="gone"
+                        android:textSize="11dp"
+                        android:textColor="@color/vermelho"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginTop="3dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+    </LinearLayout>
+
+</LinearLayout>

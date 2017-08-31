@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/branco"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        style="@style/AppToolbar"
+        app:title="@string/toolbar_cadastre_se"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/espaco_tela"
+        android:paddingRight="@dimen/espaco_tela"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/tamanho_zero"
+            android:layout_weight="12"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/tamanho_label_clique"
+                android:layout_marginTop="15dp"
+                android:gravity="center_vertical"
+                style="@style/TextoTituloTelas"
+                android:text="@string/label_cadastro_celular_titulo"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/tamanho_zero"
+            android:layout_weight="3"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/tamanho_faixa"
+                android:layout_marginRight="30dp"
+                android:background="@color/colorPrimary" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/tamanho_faixa"
+                android:layout_marginLeft="30dp"
+                android:background="@color/colorPrimaryDark" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/tamanho_zero"
+            android:layout_weight="70"
+            android:orientation="vertical"
+            android:gravity="center_horizontal|top">
+
+            <!-- EDITTEXT Celular -->
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/inputCelular"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/txtCelular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:maxLength="14"
+                    android:inputType="number"
+                    android:selectAllOnFocus="true"
+                    android:hint="@string/hint_celular"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+            <!-- TEXTVIEW MENSAGEM -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                style="@style/TextoTelas"
+                android:text="@string/label_cadastro_celular_texto"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/tamanho_zero"
+            android:layout_weight="15"
+            android:orientation="vertical"
+            android:gravity="center_horizontal|bottom">
+
+            <Button
+                android:id="@+id/cmdContinuar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/tamanho_botao"
+                style="@style/BotoesTelas"
+                android:layout_marginBottom="15dp"
+                android:text="@string/botao_cadastro_celular_continuar"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

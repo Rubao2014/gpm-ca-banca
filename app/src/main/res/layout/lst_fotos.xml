@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rtlFoto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_gravity="center">
+
+        <ImageView
+            android:id="@+id/imgFoto"
+            android:layout_width="@dimen/tamanho_foto"
+            android:layout_height="@dimen/tamanho_foto" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rtlExcluir"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="top|right"
+        android:layout_gravity="top|right">
+
+        <ImageView
+            android:layout_width="@dimen/tamanho_excluir"
+            android:layout_height="@dimen/tamanho_excluir"
+            android:src="@mipmap/excluir" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

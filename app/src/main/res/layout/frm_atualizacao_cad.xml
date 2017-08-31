@@ -1,0 +1,54 @@
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/coordinatorLayoutAtualizacaoCad"
+    android:background="@color/branco"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/branco"
+        android:orientation="vertical">
+
+        <!-- APP BAR LAYOUT para a animação da toolbar + tablayout -->
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="2dp"
+            android:id="@+id/appBarLayout"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <!-- Toolbar do app -->
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                app:title="@string/toolbar_atualizacao_cadastral"
+                style="@style/AppToolbar"
+                android:elevation="@dimen/tamanho_zero"
+                app:layout_scrollFlags="scroll|enterAlways" />
+
+            <!-- Abas -->
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:tabMode="scrollable"
+                style="@style/AppTabLayout"
+                android:minHeight="?attr/actionBarSize" />
+
+        </android.support.design.widget.AppBarLayout>
+
+        <!-- views pager com os fragmentos -->
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/espaco_tela"
+            android:paddingRight="@dimen/espaco_tela" />
+
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>

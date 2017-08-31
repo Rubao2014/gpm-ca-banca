@@ -1,0 +1,939 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/branco"
+    android:orientation="vertical">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!-- EDITTEXT NOME -->
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/inputNome"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/txtNome"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:maxLength="100"
+                    android:inputType="text"
+                    android:selectAllOnFocus="true"
+                    android:hint="@string/hint_nome" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <!-- EDITTEXT NOME MAE -->
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/inputMae"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/txtMae"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:maxLength="50"
+                    android:inputType="text"
+                    android:selectAllOnFocus="true"
+                    android:hint="@string/hint_nome_da_mae" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <!-- EDITTEXT NOME PAI -->
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/inputPai"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/txtPai"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:maxLength="50"
+                    android:inputType="text"
+                    android:selectAllOnFocus="true"
+                    android:hint="@string/hint_nome_do_pai" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <!-- SPINNER SEXO -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:gravity="left"
+                    android:textSize="11dp"
+                    android:textColor="@color/colorAccent"
+                    android:text="@string/hint_sexo" />
+
+                <Spinner
+                    android:id="@+id/cboSexo"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:theme="@style/ThemeSpinner"
+                    style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                    android:popupBackground="@color/branco"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/lblErroSexo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="@string/msg_cadastro_sexo_nao_selecionado"
+                    android:visibility="gone"
+                    android:textSize="11dp"
+                    android:textColor="@color/vermelho"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginTop="3dp" />
+
+            </LinearLayout>
+
+            <!-- SPINNER COR/RAÇA -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:gravity="left"
+                    android:textSize="11dp"
+                    android:textColor="@color/colorAccent"
+                    android:text="@string/hint_cor_raca" />
+
+                <Spinner
+                    android:id="@+id/cboCor"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:theme="@style/ThemeSpinner"
+                    style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                    android:popupBackground="@color/branco"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/lblErroCor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="@string/msg_atualizacao_cad_documentos_cor_raca_nao_selecionado"
+                    android:visibility="gone"
+                    android:textSize="11dp"
+                    android:textColor="@color/vermelho"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginTop="3dp" />
+
+            </LinearLayout>
+
+            <!-- EDITTEXT DATA DE NASCIMENTO -->
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/inputDataNascimento"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/txtDataNascimento"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:maxLength="10"
+                    android:inputType="number"
+                    android:selectAllOnFocus="true"
+                    android:hint="@string/hint_data_nascimento" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <!-- SPINNER GRUPO SANGUÍNEO-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:gravity="left"
+                    android:textSize="11dp"
+                    android:textColor="@color/colorAccent"
+                    android:text="@string/grupo_sanguineo" />
+
+                <Spinner
+                    android:id="@+id/cboGrupoSanguineo"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:theme="@style/ThemeSpinner"
+                    style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                    android:popupBackground="@color/branco"
+                    android:gravity="center" />
+
+            </LinearLayout>
+
+            <!-- SPINNER GRUPO SANGUÍNEO RH-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:gravity="left"
+                    android:textSize="11dp"
+                    android:textColor="@color/colorAccent"
+                    android:text="@string/hint_rh" />
+
+                <Spinner
+                    android:id="@+id/cboGrupoSanguineoRH"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:theme="@style/ThemeSpinner"
+                    style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                    android:popupBackground="@color/branco"
+                    android:gravity="center" />
+
+            </LinearLayout>
+
+            <!-- EDITTEXT NACIONALIDADE -->
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/inputNacionalidade"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/txtNacionalidade"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:maxLength="50"
+                    android:inputType="text"
+                    android:selectAllOnFocus="true"
+                    android:hint="@string/hint_nacionalidade" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <!-- SPINNER NATURALIDADE-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:gravity="left"
+                    android:textSize="11dp"
+                    android:textColor="@color/colorAccent"
+                    android:text="@string/hint_naturalidade" />
+
+                <Spinner
+                    android:id="@+id/cboNaturalidade"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:theme="@style/ThemeSpinner"
+                    style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                    android:popupBackground="@color/branco"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/lblErroNaturalidade"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="@string/msg_atualizacao_cad_documentos_naturalidade_nao_selecionado"
+                    android:visibility="gone"
+                    android:textSize="11dp"
+                    android:textColor="@color/vermelho"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginTop="3dp" />
+
+            </LinearLayout>
+
+            <!-- SPINNER ESTADO CIVIL-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:gravity="left"
+                    android:textSize="11dp"
+                    android:textColor="@color/colorAccent"
+                    android:text="@string/hint_estado_civil" />
+
+                <Spinner
+                    android:id="@+id/cboEstadoCivil"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:theme="@style/ThemeSpinner"
+                    style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                    android:popupBackground="@color/branco"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/lblErroEstadoCivil"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="@string/msg_atualizacao_cad_documentos_estado_civil_nao_selecionado"
+                    android:visibility="gone"
+                    android:textSize="11dp"
+                    android:textColor="@color/vermelho"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginTop="3dp" />
+
+            </LinearLayout>
+
+            <!-- SPINNER GRAU DE INSTRUÇÃO-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:gravity="left"
+                    android:textSize="11dp"
+                    android:textColor="@color/colorAccent"
+                    android:text="@string/hint_grau_de_instrucao" />
+
+                <Spinner
+                    android:id="@+id/cboGrauDeInstrucao"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:theme="@style/ThemeSpinner"
+                    style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                    android:popupBackground="@color/branco"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/lblErroGrauDeInstrucao"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="@string/msg_atualizacao_cad_documentos_grau_instrucao_nao_selecionado"
+                    android:visibility="gone"
+                    android:textSize="11dp"
+                    android:textColor="@color/vermelho"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginTop="3dp" />
+
+            </LinearLayout>
+
+            <!-- EDITTEXT RG -->
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/inputRG"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/txtRG"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:maxLength="20"
+                    android:inputType="number"
+                    android:selectAllOnFocus="true"
+                    android:hint="@string/hint_rg" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <!-- EDITTEXT DIGITO DO RG -->
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/inputRGDigito"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/txtRGDigito"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:maxLength="3"
+                    android:inputType="text"
+                    android:selectAllOnFocus="true"
+                    android:hint="@string/hint_digito" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <!-- EDITTEXT ORGAO EXPEDITOR -->
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/inputOrgaoExpeditor"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/txtOrgaoExpeditor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:maxLength="4"
+                    android:inputType="text"
+                    android:selectAllOnFocus="true"
+                    android:hint="@string/hint_orgao_expeditor" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <!-- SPINNER ORGÃO EXPEDITOR/ESTADO-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:gravity="left"
+                    android:textSize="11dp"
+                    android:textColor="@color/colorAccent"
+                    android:text="@string/hint_estado_orgao_expeditor" />
+
+                <Spinner
+                    android:id="@+id/cboOrgaoExpeditorEstado"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:theme="@style/ThemeSpinner"
+                    style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                    android:popupBackground="@color/branco"
+                    android:gravity="center" />
+
+            </LinearLayout>
+
+            <!-- EDITTEXT EXPEDIÇAO -->
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/inputExpedicao"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/txtExpedicao"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:maxLength="10"
+                    android:inputType="number"
+                    android:selectAllOnFocus="true"
+                    android:hint="@string/hint_expedicao" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <!-- EDITTEXT TITULO ELEITORAL -->
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/inputTituloEleitoral"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/txtTituloEleitoral"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:maxLength="30"
+                    android:inputType="text"
+                    android:selectAllOnFocus="true"
+                    android:hint="@string/hint_titulo_eleitoral" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <!-- EDITTEXT TITULO ELEITORAL DIGITO -->
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/inputTituloEleitoralDigito"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/txtTituloEleitoralDigito"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:maxLength="3"
+                    android:inputType="text"
+                    android:selectAllOnFocus="true"
+                    android:hint="@string/hint_titulo_eleitoral_digito" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <!-- EDITTEXT ZONA ELEITORAL -->
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/inputZona"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/txtZona"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:maxLength="6"
+                    android:inputType="text"
+                    android:selectAllOnFocus="true"
+                    android:hint="@string/hint_zona_eleitoral" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <!-- EDITTEXT SEÇÃO -->
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/inputSecao"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/txtSecao"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:maxLength="6"
+                    android:inputType="text"
+                    android:selectAllOnFocus="true"
+                    android:hint="@string/hint_secao" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <!-- EDITTEXT DATA TITULO ELEITORAL -->
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/inputDataTituloEleitoral"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/txtDataTituloEleitoral"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:maxLength="10"
+                    android:inputType="number"
+                    android:selectAllOnFocus="true"
+                    android:hint="@string/hint_data_titulo_eleitoral" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <!-- EDITTEXT CARTEIRA DE TRABALHO -->
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/inputCarteiraDeTrabalho"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/txtCarteiraDeTrabalho"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:maxLength="30"
+                    android:inputType="text"
+                    android:selectAllOnFocus="true"
+                    android:hint="@string/hint_carteira_de_trabalho" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <!-- EDITTEXT SERIE -->
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/inputSerie"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/txtSerie"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:maxLength="6"
+                    android:inputType="text"
+                    android:selectAllOnFocus="true"
+                    android:hint="@string/hint_serie" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <!-- SPINNER SERIE/ESTADO -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:gravity="left"
+                    android:textSize="11dp"
+                    android:textColor="@color/colorAccent"
+                    android:text="@string/hint_serie_estado" />
+
+                <Spinner
+                    android:id="@+id/cboSerieEstado"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:theme="@style/ThemeSpinner"
+                    style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                    android:popupBackground="@color/branco"
+                    android:gravity="center" />
+
+            </LinearLayout>
+
+            <!-- EDITTEXT DATA CARTEIRA DE TRABALHO -->
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/inputDataCarteiraDeTrabalho"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/txtDataCarteiraDeTrabalho"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:maxLength="10"
+                    android:inputType="number"
+                    android:selectAllOnFocus="true"
+                    android:hint="@string/hint_data_carteira_de_trabalho" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <!-- EDITTEXT CARTEIRA DE HABILITAÇÃO -->
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/inputCarteiraDeHabilitacao"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/txtCarteiraDeHabilitacao"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:maxLength="30"
+                    android:inputType="text"
+                    android:selectAllOnFocus="true"
+                    android:hint="@string/hint_carteira_de_habilitacao" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <!-- EDITTEXT CATEGORIA DA CARTEIRA DE HABILITAÇÃO -->
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/inputCategoria"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/txtCategoria"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:maxLength="3"
+                    android:inputType="text"
+                    android:selectAllOnFocus="true"
+                    android:hint="@string/hint_categoria" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <!-- EDITTEXT VALIDADE -->
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/inputValidade"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/txtValidade"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:maxLength="10"
+                    android:inputType="number"
+                    android:selectAllOnFocus="true"
+                    android:hint="@string/hint_validade" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <!-- EDITTEXT PIS PASEP -->
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/inputPis"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/txtPis"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:maxLength="30"
+                    android:inputType="text"
+                    android:selectAllOnFocus="true"
+                    android:hint="@string/hint_pis" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <!-- SPINNER PORTADOR DE DEFICIENCIA FÍSICA? -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:gravity="left"
+                    android:textSize="11dp"
+                    android:textColor="@color/colorAccent"
+                    android:text="@string/hint_deficiencia" />
+
+                <Spinner
+                    android:id="@+id/cboDeficiencia"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:theme="@style/ThemeSpinner"
+                    style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                    android:popupBackground="@color/branco"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/lblErroDeficienciaFisica"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="@string/msg_atualizacao_cad_documentos_deficiencia_fisica_nao_selecionado"
+                    android:visibility="gone"
+                    android:textSize="11dp"
+                    android:textColor="@color/vermelho"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginTop="3dp" />
+
+            </LinearLayout>
+
+            <!-- EDITTEXT DEFICIENCIA FÍSICA -->
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/inputDeficienciaFisica"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/txtDeficienciaFisica"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:maxLength="100"
+                    android:inputType="text"
+                    android:selectAllOnFocus="true"
+                    android:hint="@string/hint_deficiencia_fisica" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <!-- SPINNER DOENÇA CRÔNICA -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:gravity="left"
+                    android:textSize="11dp"
+                    android:textColor="@color/colorAccent"
+                    android:text="@string/hint_doenca_cronica" />
+
+                <Spinner
+                    android:id="@+id/cboDoencaCronica"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:theme="@style/ThemeSpinner"
+                    style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                    android:popupBackground="@color/branco"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/lblErroDoencaCronica"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="@string/msg_atualizacao_cad_documentos_doenca_cronica_nao_selecionado"
+                    android:visibility="gone"
+                    android:textSize="11dp"
+                    android:textColor="@color/vermelho"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginTop="3dp" />
+
+            </LinearLayout>
+
+            <!-- EDITTEXT DOENÇA CRÔNICA -->
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/inputDoencaCronica"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/txtDoencaCronica"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:maxLength="100"
+                    android:inputType="text"
+                    android:selectAllOnFocus="true"
+                    android:hint="@string/hint_doenca_cronica" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <!-- SPINNER REPRESENTANTE LEGAL -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:gravity="left"
+                    android:textSize="11dp"
+                    android:textColor="@color/colorAccent"
+                    android:text="@string/hint_representante_legal" />
+
+                <Spinner
+                    android:id="@+id/cboRepresentanteLegal"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:theme="@style/ThemeSpinner"
+                    style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                    android:popupBackground="@color/branco"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/lblErroRepresentanteLegal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="@string/msg_atualizacao_cad_documentos_representante_legal_nao_selecionado"
+                    android:visibility="gone"
+                    android:textSize="11dp"
+                    android:textColor="@color/vermelho"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginTop="3dp" />
+
+            </LinearLayout>
+
+            <!-- SPINNER ACOMPANHA PESSOA DOENTE? -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:gravity="left"
+                    android:textSize="11dp"
+                    android:textColor="@color/colorAccent"
+                    android:text="@string/hint_pessoa_doente" />
+
+                <Spinner
+                    android:id="@+id/cboPessoaDoente"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:theme="@style/ThemeSpinner"
+                    style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                    android:popupBackground="@color/branco"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/lblErroAcompanhaDoente"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="@string/msg_atualizacao_cad_documentos_acompanha_doente_nao_selecionado"
+                    android:visibility="gone"
+                    android:textSize="11dp"
+                    android:textColor="@color/vermelho"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginTop="3dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>

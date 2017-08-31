@@ -1,0 +1,636 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/branco"
+    android:orientation="vertical">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!-- SPINNER MORADIA-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:gravity="left"
+                    android:textSize="11dp"
+                    android:textColor="@color/colorAccent"
+                    android:text="@string/hint_moradia" />
+
+                <Spinner
+                    android:id="@+id/cboMoradia"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:theme="@style/ThemeSpinner"
+                    style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                    android:popupBackground="@color/branco"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/lblErroMoradia"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="@string/msg_atualizacao_cad_questionario_moradia_nao_selecionado"
+                    android:visibility="gone"
+                    android:textSize="11dp"
+                    android:textColor="@color/vermelho"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginTop="3dp" />
+
+            </LinearLayout>
+
+            <!-- SPINNER TIPO DE MORADIA-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:gravity="left"
+                    android:textSize="11dp"
+                    android:textColor="@color/colorAccent"
+                    android:text="@string/hint_tipo_moradia" />
+
+                <Spinner
+                    android:id="@+id/cboTipoMoradia"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:theme="@style/ThemeSpinner"
+                    style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                    android:popupBackground="@color/branco"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/lblErroTipoMoradia"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="@string/msg_atualizacao_cad_questionario_tipo_moradia_nao_selecionado"
+                    android:visibility="gone"
+                    android:textSize="11dp"
+                    android:textColor="@color/vermelho"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginTop="3dp" />
+
+            </LinearLayout>
+
+            <!-- SPINNER ENERGIA -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:gravity="left"
+                    android:textSize="11dp"
+                    android:textColor="@color/colorAccent"
+                    android:text="@string/hint_energia" />
+
+                <Spinner
+                    android:id="@+id/cboEnergia"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:theme="@style/ThemeSpinner"
+                    style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                    android:popupBackground="@color/branco"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/lblErroEnergia"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="@string/msg_atualizacao_cad_questionario_energia_nao_selecionado"
+                    android:visibility="gone"
+                    android:textSize="11dp"
+                    android:textColor="@color/vermelho"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginTop="3dp" />
+
+            </LinearLayout>
+
+            <!-- SPINNER AGUA-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:gravity="left"
+                    android:textSize="11dp"
+                    android:textColor="@color/colorAccent"
+                    android:text="@string/hint_agua" />
+
+                <Spinner
+                    android:id="@+id/cboAgua"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:theme="@style/ThemeSpinner"
+                    style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                    android:popupBackground="@color/branco"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/lblErroAgua"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="@string/msg_atualizacao_cad_questionario_agua_nao_selecionado"
+                    android:visibility="gone"
+                    android:textSize="11dp"
+                    android:textColor="@color/vermelho"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginTop="3dp" />
+
+            </LinearLayout>
+
+            <!-- SPINNER COLETA DE LIXO-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:gravity="left"
+                    android:textSize="11dp"
+                    android:textColor="@color/colorAccent"
+                    android:text="@string/hint_coleta_lixo" />
+
+                <Spinner
+                    android:id="@+id/cboColetaLixo"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:theme="@style/ThemeSpinner"
+                    style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                    android:popupBackground="@color/branco"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/lblErroColetaLixo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="@string/msg_atualizacao_cad_questionario_coleta_lixo_nao_selecionado"
+                    android:visibility="gone"
+                    android:textSize="11dp"
+                    android:textColor="@color/vermelho"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginTop="3dp" />
+
+            </LinearLayout>
+
+            <!-- SPINNER ESGOTO-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:gravity="left"
+                    android:textSize="11dp"
+                    android:textColor="@color/colorAccent"
+                    android:text="@string/hint_esgoto" />
+
+                <Spinner
+                    android:id="@+id/cboEsgoto"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:theme="@style/ThemeSpinner"
+                    style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                    android:popupBackground="@color/branco"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/lblErroEsgoto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="@string/msg_atualizacao_cad_questionario_esgoto_nao_selecionado"
+                    android:visibility="gone"
+                    android:textSize="11dp"
+                    android:textColor="@color/vermelho"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginTop="3dp" />
+
+            </LinearLayout>
+
+            <!-- SPINNER ATIVIDADE FÍSICA-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:gravity="left"
+                    android:textSize="11dp"
+                    android:textColor="@color/colorAccent"
+                    android:text="@string/hint_atividade_fisica" />
+
+                <Spinner
+                    android:id="@+id/cboAtividadeFisica"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:theme="@style/ThemeSpinner"
+                    style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                    android:popupBackground="@color/branco"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/lblErroAtividadeFisica"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="@string/msg_atualizacao_cad_questionario_atividade_fisica_nao_selecionado"
+                    android:visibility="gone"
+                    android:textSize="11dp"
+                    android:textColor="@color/vermelho"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginTop="3dp" />
+
+            </LinearLayout>
+
+            <!-- SPINNER ALERGIA-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:gravity="left"
+                    android:textSize="11dp"
+                    android:textColor="@color/colorAccent"
+                    android:text="@string/hint_alergia" />
+
+                <Spinner
+                    android:id="@+id/cboAlergia"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:theme="@style/ThemeSpinner"
+                    style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                    android:popupBackground="@color/branco"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/lblErroAlergia"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="@string/msg_atualizacao_cad_questionario_alergia_nao_selecionado"
+                    android:visibility="gone"
+                    android:textSize="11dp"
+                    android:textColor="@color/vermelho"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginTop="3dp" />
+
+            </LinearLayout>
+
+            <!-- SPINNER HIPERTENSO-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:gravity="left"
+                    android:textSize="11dp"
+                    android:textColor="@color/colorAccent"
+                    android:text="@string/hint_hipertenso" />
+
+                <Spinner
+                    android:id="@+id/cboHipertenso"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:theme="@style/ThemeSpinner"
+                    style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                    android:popupBackground="@color/branco"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/lblErroHipertenso"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="@string/msg_atualizacao_cad_questionario_hipertenso_nao_selecionado"
+                    android:visibility="gone"
+                    android:textSize="11dp"
+                    android:textColor="@color/vermelho"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginTop="3dp" />
+
+            </LinearLayout>
+
+            <!-- SPINNER DIABÉTICO-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:gravity="left"
+                    android:textSize="11dp"
+                    android:textColor="@color/colorAccent"
+                    android:text="@string/hint_diabetico" />
+
+                <Spinner
+                    android:id="@+id/cboDiabetico"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:theme="@style/ThemeSpinner"
+                    style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                    android:popupBackground="@color/branco"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/lblErroDiabetico"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="@string/msg_atualizacao_cad_questionario_diabetico_nao_selecionado"
+                    android:visibility="gone"
+                    android:textSize="11dp"
+                    android:textColor="@color/vermelho"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginTop="3dp" />
+
+            </LinearLayout>
+
+            <!-- SPINNER CARDIACO-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:gravity="left"
+                    android:textSize="11dp"
+                    android:textColor="@color/colorAccent"
+                    android:text="@string/hint_cardiaco" />
+
+                <Spinner
+                    android:id="@+id/cboCardiaco"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:theme="@style/ThemeSpinner"
+                    style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                    android:popupBackground="@color/branco"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/lblErroCardiaco"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="@string/msg_atualizacao_cad_questionario_cardiaco_nao_selecionado"
+                    android:visibility="gone"
+                    android:textSize="11dp"
+                    android:textColor="@color/vermelho"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginTop="3dp" />
+
+            </LinearLayout>
+
+            <!-- SPINNER COLESTEROL ALTO-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:gravity="left"
+                    android:textSize="11dp"
+                    android:textColor="@color/colorAccent"
+                    android:text="@string/hint_colesterol" />
+
+                <Spinner
+                    android:id="@+id/cboColesterol"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:theme="@style/ThemeSpinner"
+                    style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                    android:popupBackground="@color/branco"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/lblErroColesterolAlto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="@string/msg_atualizacao_cad_questionario_colesterol_alto_nao_selecionado"
+                    android:visibility="gone"
+                    android:textSize="11dp"
+                    android:textColor="@color/vermelho"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginTop="3dp" />
+
+           </LinearLayout>
+
+            <!-- SPINNER DOADOR DE ÓRGÃOS-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:gravity="left"
+                    android:textSize="11dp"
+                    android:textColor="@color/colorAccent"
+                    android:text="@string/hint_doador" />
+
+                <Spinner
+                    android:id="@+id/cboDoador"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:theme="@style/ThemeSpinner"
+                    style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                    android:popupBackground="@color/branco"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/lblErroDoadorOrgaos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="@string/msg_atualizacao_cad_questionario_doador_orgaos_nao_selecionado"
+                    android:visibility="gone"
+                    android:textSize="11dp"
+                    android:textColor="@color/vermelho"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginTop="3dp" />
+
+            </LinearLayout>
+
+            <!-- SPINNER HÁBITO DE FUMAR-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:gravity="left"
+                    android:textSize="11dp"
+                    android:textColor="@color/colorAccent"
+                    android:text="@string/hint_fumar" />
+
+                <Spinner
+                    android:id="@+id/cboFumante"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:theme="@style/ThemeSpinner"
+                    style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                    android:popupBackground="@color/branco"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/lblErroFumante"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="@string/msg_atualizacao_cad_questionario_habito_fumar_nao_selecionado"
+                    android:visibility="gone"
+                    android:textSize="11dp"
+                    android:textColor="@color/vermelho"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginTop="3dp" />
+
+            </LinearLayout>
+
+            <!-- SPINNER HÁBITO DE BEBER-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:gravity="left"
+                    android:textSize="11dp"
+                    android:textColor="@color/colorAccent"
+                    android:text="@string/hint_habito_beber" />
+
+                <Spinner
+                    android:id="@+id/cboBeber"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:theme="@style/ThemeSpinner"
+                    style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                    android:popupBackground="@color/branco"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/lblErroBeber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="@string/msg_atualizacao_cad_questionario_habito_beber_nao_selecionado"
+                    android:visibility="gone"
+                    android:textSize="11dp"
+                    android:textColor="@color/vermelho"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginTop="3dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>

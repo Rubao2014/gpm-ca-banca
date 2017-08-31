@@ -1,0 +1,153 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            style="@style/AppToolbar"
+            app:title="@string/toolbar_cadastrar_cursos"/>
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="@dimen/espaco_tela"
+                android:paddingRight="@dimen/espaco_tela"
+                android:orientation="vertical">
+
+                <!-- SPINNER  TIPO DE CURSO-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginBottom="2dp"
+                        android:gravity="left"
+                        android:textSize="11dp"
+                        android:textColor="@color/colorAccent"
+                        android:text="@string/hint_tipo" />
+
+                    <Spinner
+                        android:id="@+id/cboTipo"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:theme="@style/ThemeSpinner"
+                        style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                        android:popupBackground="@color/branco"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/lblErroTipoCurso"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:text="@string/msg_cadastro_novos_cursos_tipo_nao_selecionado"
+                        android:visibility="gone"
+                        android:textSize="11dp"
+                        android:textColor="@color/vermelho"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginTop="3dp" />
+
+                </LinearLayout>
+
+                <!-- EDITTEXT DESCRIÇAO -->
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/inputDescricao"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/txtDescricao"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:maxLength="50"
+                        android:inputType="text"
+                        android:selectAllOnFocus="true"
+                        android:hint="@string/hint_descricao" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <!-- EDITTEXT INSTITUIÇÃO -->
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/inputInstituicao"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/txtInstituicao"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:maxLength="50"
+                        android:inputType="text"
+                        android:selectAllOnFocus="true"
+                        android:hint="@string/hint_instituicao" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <!-- EDITTEXT CARGA-HORÁRIA -->
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/inputCargaHoraria"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/txtCargaHoraria"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:maxLength="4"
+                        android:inputType="number"
+                        android:selectAllOnFocus="true"
+                        android:hint="@string/hint_carga_horaria" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <!-- EDITTEXT DATA DE CONCLUSÃO -->
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/inputDataDeConclusao"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/txtDataDeConclusao"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:maxLength="10"
+                        android:inputType="number"
+                        android:selectAllOnFocus="true"
+                        android:hint="@string/hint_data_de_conclusao" />
+
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+    </LinearLayout>
+
+</LinearLayout>

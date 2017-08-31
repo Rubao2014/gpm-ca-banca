@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/branco"
+    android:orientation="vertical">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!-- SPINNER TIPO DE ENDEREÇO -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:gravity="left"
+                    android:textSize="11dp"
+                    android:textColor="@color/colorAccent"
+                    android:text="@string/hint_tipo_endereco" />
+
+                <Spinner
+                    android:id="@+id/cboTipoDeEndereco"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:theme="@style/ThemeSpinner"
+                    style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                    android:popupBackground="@color/branco"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/lblErroTipoDeEndereco"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="@string/msg_atualizacao_cad_enderecos_tipo_nao_selecionado"
+                    android:visibility="gone"
+                    android:textSize="11dp"
+                    android:textColor="@color/vermelho"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginTop="3dp" />
+
+            </LinearLayout>
+
+            <!-- EDITTEXT LOGRADOURO -->
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/inputLogradouro"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/txtLogradouro"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:maxLength="100"
+                    android:inputType="text"
+                    android:selectAllOnFocus="true"
+                    android:hint="@string/hint_nome_logradouro" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <!-- EDITTEXT NUMERO -->
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/inputNumero"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/txtNumero"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:maxLength="7"
+                    android:inputType="text"
+                    android:selectAllOnFocus="true"
+                    android:hint="@string/hint_numero" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <!-- EDITTEXT COMPLEMENTO -->
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/inputComplemento"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/txtComplemento"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:maxLength="100"
+                    android:inputType="text"
+                    android:selectAllOnFocus="true"
+                    android:hint="@string/hint_complemento" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <!-- EDITTEXT PONTO DE REFERENCIA -->
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/inputpontoDeReferencia"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/txtPontoDeReferencia"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:maxLength="100"
+                    android:inputType="text"
+                    android:selectAllOnFocus="true"
+                    android:hint="@string/hint_ponto_referencia" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <!-- EDITTEXT EMAIL -->
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/inputEmail"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/txtEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:maxLength="150"
+                    android:inputType="textEmailAddress"
+                    android:selectAllOnFocus="true"
+                    android:hint="@string/hint_email" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <!-- EDITTEXT BAIRRO -->
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/inputBairro"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/txtBairro"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:maxLength="100"
+                    android:inputType="text"
+                    android:selectAllOnFocus="true"
+                    android:hint="@string/hint_bairro" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <!-- EDITTEXT CIDADE -->
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/inputCidade"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/txtCidade"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:maxLength="100"
+                    android:inputType="text"
+                    android:selectAllOnFocus="true"
+                    android:hint="@string/hint_cidade" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <!-- EDITTEXT CEP -->
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/inputCEP"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/txtCEP"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:maxLength="9"
+                    android:inputType="number"
+                    android:selectAllOnFocus="true"
+                    android:hint="@string/hint_cep" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <!-- EDITTEXT CONTATO -->
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/inputTelefoneContato"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/txtTelefoneContato"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:maxLength="14"
+                    android:inputType="number"
+                    android:selectAllOnFocus="true"
+                    android:hint="@string/hint_telefone_contato" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <!-- EDITTEXT CELULAR -->
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/inputCelular"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/txtCelular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:maxLength="14"
+                    android:inputType="number"
+                    android:selectAllOnFocus="true"
+                    android:hint="@string/hint_celular" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <!-- EDITTEXT FIXO -->
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/inputFixo"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/txtFixo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:maxLength="13"
+                    android:inputType="number"
+                    android:selectAllOnFocus="true"
+                    android:hint="@string/hint_fixo" />
+
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>

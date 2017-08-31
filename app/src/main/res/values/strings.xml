@@ -1,0 +1,426 @@
+<resources>
+    <!-- Nome do sistema -->
+    <string name="app_name">APM</string>
+    <string name="configuracao_conexao_ca">msso_config.json</string>
+    <string name="url_conexao_gateway">https://apigateway.gpm.solutions:8443/</string>
+    <string name="url_conexao_gateway_ca">https://apigateway.gpm.solutions:8443/</string>
+
+    <!-- Todas as palavras -->
+    <string name="voltar">Voltar</string>
+    <string name="sim">Sim</string>
+    <string name="nao">Não</string>
+    <string name="atencao">Atenção</string>
+    <string name="sucesso">Sucesso</string>
+    <string name="ok">OK</string>
+
+    <!-- Titulos das toolbars -->
+    <string name="toolbar_login">Login</string>
+    <string name="toolbar_cadastre_se">Cadastre-se</string>
+    <string name="toolbar_oca">GUIA DE SERVIÇOS</string>
+    <string name="toolbar_esqueci_minha_senha">Esqueci minha senha</string>
+    <string name="toolbar_meus_dados">Meus Dados</string>
+    <string name="toolbar_carta_servicos">Carta de Serviços</string>
+    <string name="toolbar_detran">Detran-AC</string>
+    <string name="toolbar_atualizacao_cadastral">Atualização Cadastral</string>
+    <string name="toolbar_cadastrar_dependentes">Cadastrar Dependentes</string>
+    <string name="toolbar_cadastrar_cursos">Cadastrar Cursos</string>
+    <string name="toolbar_gerar_dae">Gere a sua guia</string>
+
+    <!-- Todos os menus -->
+    <string name="menu_gravar">&#160;&#160;Gravar</string>
+
+    <!-- Login -->
+    <string name="hint_email">E-mail</string>
+    <string name="hint_senha">Senha</string>
+    <string name="botao_entrar">ENTRAR</string>
+    <string name="botao_registrar">REGISTRE-SE NO APP DO APM</string>
+    <string name="label_manter_conectado">Mantenha-me conectado</string>
+    <string name="label_entrar_mesmo_assim">Entrar mesmo assim</string>
+    <string name="label_esqueci_minha_senha">Esqueci minha senha!</string>
+    <string name="msg_login_email_em_branco">O campo de e-mail não pode estar em branco!</string>
+    <string name="msg_login_email_invalido">O e-mail informado é inválido!</string>
+    <string name="msg_login_senha_em_branco">O campo de senha não pode estar em branco!</string>
+    <string name="msg_login_impossivel_validar">Impossível validar o usuário e/ou senha!</string>
+    <string name="msg_login_validando_usuario">Aguarde. Validando usuário ...</string>
+    <string name="msg_login_sem_conexao">Não há conexão com a internet. Por favor verifique !</string>
+
+    <!-- Lembrete -->
+    <string name="msg_lembrete_impossivel_logout">Impossível entrar no aplicativo como visitante!</string>
+    <string name="msg_lembrete_logout">Aguarde. Entrando como visitante ...</string>
+
+    <!-- Cadastro Inicio -->
+    <string name="label_participe_gpm">Participe do APM</string>
+    <string name="label_dados_participacao">Por meio do cadastro, você concorda com nossos <b>Termos do APM</b> e que você leu as nossas Politicas de Privacidade, incluindo o nosso uso de Cookies. Você poderá receber notificações de SMS do APM e poderá desliga-la a qualquer momento.</string>
+    <string name="botao_continuar_agora">CONTINUAR AGORA</string>
+    <string name="botao_ja_possui_conta">JÁ POSSUI CONTA?</string>
+
+    <!-- Cadastro Nome -->
+    <string name="label_cadastro_nome_qual_seu_nome">Qual seu nome?</string>
+    <string name="label_cadastro_nome_nome">Nome Completo</string>
+    <string name="botao_cadastro_nome_continuar">CONTINUAR</string>
+    <string name="msg_cadastro_nome_em_branco">O campo de nome não pode estar em branco!</string>
+
+    <!-- Menu Lateral -->
+    <string name="label_menu_lateral_titulo">MENU</string>
+    <string name="botao_menu_lateral_sair">Sair do APM</string>
+    <string name="botao_menu_lateral_meus_dados">Meus Dados</string>
+    <string name="botao_menu_lateral_configuracoes">Configurações</string>
+    <string name="botao_menu_lateral_ultimos_acessos">Últimos Acessos</string>
+    <string name="botao_menu_lateral_suporte">Suporte</string>
+
+
+    <!-- DETRAN -->
+    <string name="msg_detran_buscar_pontuacao">Aguarde. Buscando pontuação do motorista ...</string>
+
+
+    <!-- DashBoard -->
+    <string name="hint_dashboard_procurar">Localizar</string>
+    <string name="msg_sair_sistema">Deseja realmente sair do aplicativo?</string>
+    <string name="msg_dashboard_impossivel_logout">Falha ao realizar logout do usuário!</string>
+    <string name="msg_dashboard_impossivel_servicos">Falha ao obter serviços do usuário!</string>
+    <string name="msg_dashboard_logout">Aguarde. Realizando logout ...</string>
+    <string name="msg_dashboard_obtendo_servicos">Aguarde. Obtendo serviços ...</string>
+    <string name="id_atualizacao_cadastral">atualizacaoCadastral</string>
+    <string name="id_detran_pontuacao">detranPontuacao</string>
+    <string name="id_detran_dados_veiculo">detranDadosVeiculo</string>
+    <string name="nome_servico_atualizacao_cadastral">Atualização cadastral do servidor público</string>
+    <string name="nome_servico_detran">PONTOS CNH</string>
+    <string name="nome_servico_sefaz">GERAR DAE</string>
+    <string name="nome_servico_detran_pontuacao">Pontuação</string>
+    <string name="nome_servico_detran_dados_veiculo">Dados Veículo</string>
+    <string name="nome_servico_carta">CENTRAL OCA</string>
+    <string name="nome_servico_carta_de_Servicos">Lista Completa</string>
+
+
+    <!-- Cadastro CPF -->
+    <string name="label_cadastro_cpf_titulo">Qual seu CPF?</string>
+    <string name="label_cadastro_cpf_textoCPF">Entre com seu CPF para que seu cadastro seja único e intransferível. Desta forma garantiremos mais segurança para você.</string>
+    <string name="botao_cadastro_cpf_continuar">CONTINUAR</string>
+    <string name="hint_cpf">CPF</string>
+    <string name="msg_cadastro_cpf_em_branco">O campo de CPF não pode estar em branco!</string>
+    <string name="msg_cadastro_cpf_invalido">O CPF informado é inválido!</string>
+
+    <!-- Cadastro Email -->
+    <string name="label_cadastro_email_titulo">Qual seu e-mail?</string>
+    <string name="label_cadastro_email_textoEmail">Qual seu e-mail?</string>
+    <string name="label_cadastro_email_email">E-mail</string>
+    <string name="label_cadastro_email_confirmarEmail">Confirmação do e-mail</string>
+    <string name="label_cadastro_email_texto_lembrete">Lembre-se deste e-mail pois ele será utilizado futuramente.</string>
+    <string name="botao_cadastro_email_continuar">CONTINUAR</string>
+    <string name="msg_cadastro_email_em_branco">O campo de e-mail não pode estar em branco!</string>
+    <string name="msg_cadastro_email_invalido">O e-mail informado é inválido!</string>
+    <string name="msg_cadastro_email_conf_em_branco">O campo de confirmação de e-mail não pode estar em branco!</string>
+    <string name="msg_cadastro_email_conf_invalido">A confirmação de e-mail informada é inválida!</string>
+    <string name="msg_cadastro_email_nao_confere">A confirmação de e-mail, não confere com o e-mail informado!</string>
+
+    <!-- Cadastro Senha -->
+    <string name="label_cadastro_senha_titulo">Crie uma senha</string>
+    <string name="label_cadastro_senha_senha">Senha</string>
+    <string name="label_cadastro_senha_confirmarSenha">Confirmação da senha</string>
+    <string name="label_cadastro_senha_texto_lembrete">Guarde esta senha pois ela será necessaria futuramente.</string>
+    <string name="botao_cadastro_senha_continuar">CONTINUAR</string>
+    <string name="msg_cadastro_senha_em_branco">O campo de senha não pode estar em branco!</string>
+    <string name="msg_cadastro_senha_invalida">A senha informada é inválida!</string>
+    <string name="msg_cadastro_senha_conf_em_branco">O campo de confirmação de senha não pode estar em branco!</string>
+    <string name="msg_cadastro_senha_conf_invalida">A confirmação de senha informada é inválida!</string>
+    <string name="msg_cadastro_senha_nao_confere">A confirmação de senha, não confere com a senha informada!</string>
+
+    <!-- Cadastro Nascimento -->
+    <string name="label_cadastro_nascimento_titulo">Qual sua data de nascimento?</string>
+    <string name="botao_cadastro_nascimento_continuar">CONTINUAR</string>
+    <string name="hint_data_nascimento">Data de nascimento</string>
+    <string name="msg_cadastro_data_nascimento_em_branco">O campo de data de nascimento não pode estar em branco!</string>
+    <string name="msg_cadastro_data_nascimento_invalida">A data de nascimento informada é inválida!</string>
+
+    <!-- Cadastro Celular -->
+    <string name="label_cadastro_celular_titulo">Qual o número de seu celular?</string>
+    <string name="botao_cadastro_celular_continuar">CONTINUAR</string>
+    <string name="hint_celular">Celular</string>
+    <string name="label_cadastro_celular_texto">Informe o número de seu celular para que possamos lhe enviar dicas e novas informações sobre o APM.</string>
+    <string name="msg_cadastro_celular_em_branco">O campo de celular não pode estar em branco!</string>
+    <string name="msg_cadastro_celular_invalido">O celular informado é inválido!</string>
+
+    <!-- Cadastro Sexo -->
+    <string name="label_cadastro_sexo_titulo">Qual seu sexo?</string>
+    <string name="botao_cadastro_sexo_continuar">CONTINUAR</string>
+    <string name="msg_cadastro_sexo_obtendo_identificacao">Aguarde. Obtendo identificação ...</string>
+    <string name="msg_cadastro_sexo_gravando_usuario">Aguarde. Gravando dados do usuário ...</string>
+    <string name="msg_cadastro_sexo_nao_selecionado">É necessário selecionar uma opção para sexo!</string>
+    <string name="cadastro_sexo_masculino">Masculino</string>
+    <string name="cadastro_sexo_feminino">Feminino</string>
+
+    <!-- Cadastro Finalizado -->
+    <string name="label_cadastro_finalizado_titulo_sucesso">Sucesso!</string>
+    <string name="label_cadastro_finalizado_titulo_erro">Erro</string>
+    <string name="label_cadastro_finalizado_mensagem">Dentro de alguns minutos você receberá um e-mail de confirmação em sua caixa postal. Por Favor não se esqueça de confirmar clicando no link que aparecerá no corpo deste e-mail.</string>
+    <string name="botao_cadastro_finalizado_continuar">FINALIZAR</string>
+
+    <!-- Cadastro Fotos -->
+    <string name="label_cadastro_fotos_falta_pouco">Agora falta pouco!</string>
+    <string name="label_cadastro_fotos_mensagem_atencao">O envio de comprovação para alteração está limitado a 15 imagens por comprovante.</string>
+    <string name="botao_cadastro_fotos_galeria">GALERIA</string>
+    <string name="botao_cadastro_fotos_capturar">CAPTURAR</string>
+    <string name="msg_atualizacao_cad_fotos_sem_camera">Seu aparelho não possui câmera!</string>
+    <string name="msg_atualizacao_cad_fotos_selecione_imagem">Selecione a imagem</string>
+    <string name="msg_atualizacao_cad_fotos_excluir">Deseja realmente excluir o curso selecionado?</string>
+    <string name="msg_atualizacao_cad_fotos_sair">Caso você queira sair, esta opção irá cancelar o cadastramento realizado até o momento. Deseja realmente sair da atualização cadastral?</string>
+    <string name="msg_atualizacao_cad_fotos_sem_fotos">É necessário ao menos uma foto para envio dos comprovantes de mudança para o servidor!</string>
+    <string name="msg_atualizacao_cad_fotos_limite_fotos">O limite para envio de fotos é de 15 imagens. Por favor remova as fotos adicionais ao limite!</string>
+    <string name="msg_atualizacao_cad_fotos_enviando">Aguarde. Enviando fotos ...</string>
+    <string name="msg_atualizacao_cad_impossivel_enviar_fotos">Impossível enviar as fotos para o servidor!</string>
+    <string name="msg_atualizacao_cad_sucesso">Você realizou a atualização cadastral 2017. Imprima ou salve o seu comprovante.\nEm até 30 (trinta) dias, acesse novamente o sistema a fim de consultar se sua atualização foi validada pela Secretaria de Administração e Previdência, sendo três situações possíveis:\ni) “Em processamento”, para os casos em que foram feitas alterações pelo servidor, mas estas ainda não foram analisadas pela SEADPREV. Se estiver nessa situação, aguarde mais alguns dias e volte a acessar o sistema.\nii) “Com pendências”, para os casos em que a documentação anexada não permitiu a validação dos dados, devendo o sistema ser reaberto para que o servidor possa proceder à juntada de novos documentos. Se estiver nessa situação significa que a atualização não foi validada por um destes motivos: 1. Falta de documentação comprobatória; 2. Documentação/imagem ilegível; 3. Documentação/imagem rasurada; ou 4. Informação divergente do documento. Nesse caso, você deve corrigir sua atualização até o prazo final (06/11/2017), sob pena de sofrer o bloqueio da remuneração previsto no Decreto nº 17.017, de 17 de abril de 2017.\niii) “Processada”, para os casos em que as alterações realizadas já foram validadas pela SEADPREV ou quando o servidor acessou o sistema e apenas confirmou as informações existentes, sendo a validação automática pelo sistema. Se estiver nessa situação, fique tranquilo, pois sua atualização cadastral 2017 está finalizada</string>
+
+    <!-- Esqueci Minha Senha -->
+    <string name="label_esqueci_minha_senha_titulo">Qual seu e-mail?</string>
+    <string name="label_esqueci_minha_senha_email">E-mail</string>
+    <string name="label_esqueci_minha_senha_confirmar_email">Confirmação do Email</string>
+    <string name="label_esqueci_minha_senha_mensagem">Lembre-se deste e-mail pois ele será utilizado futuramente.</string>
+    <string name="botao_esqueci_minha_senha_enviar">ENVIAR</string>
+    <string name="msg_esqueci_minha_senha_solicitando">Aguarde. Solicitando nova senha ...</string>
+
+    <!-- Esqueci Minha Senha Finalizar -->
+    <string name="label_esqueci_minha_senha_finalizar_titulo">Muito bem!</string>
+    <string name="label_esqueci_minha_senha_finalizar_mensagem">Dentro de alguns minutos você receberá um e-mail para refazer sua senha.</string>
+    <string name="botao_esqueci_minha_senha_finalizar_finalizar">FINALIZAR</string>
+
+    <!-- Lembrete -->
+    <string name="label_lembrete_titulo">Lembre-se</string>
+    <string name="label_lembrete_mensagem">Sem cadastro alguns serviços ficarão indisponíveis. Por meio do cadastro, você concorda com nossos <b>Termos do APM</b> e que você leu as nossas Politicas de Privacidade.</string>
+    <string name="botao_lembrete_criar_conta">CRIAR UMA CONTA</string>
+    <string name="botao_lembrete_entrar">ENTRAR ASSIM MESMO</string>
+    <string name="botao_lembrete_possui_conta">JÁ POSSUO CONTA</string>
+
+    <!-- DETRAN -->
+    <string name="tablayout_detran_pontos">PONTOS NA CNH</string>
+    <string name="tablayout_detran_dados_veiculo">DADOS VEÍCULO</string>
+    <string name="hint_detran_seus_pontos">Seus Pontos</string>
+    <string name="hint_detran_dados_do_veículo">Dados Veículo</string>
+
+    <!-- Atualização Cadastral -->
+    <string name="tablayout_documentos">DOCUMENTOS</string>
+    <string name="tablayout_endereco">ENDEREÇO</string>
+    <string name="tablayout_dependentes">DEPENDENTES</string>
+    <string name="tablayout_cursos">CURSOS</string>
+    <string name="tablayout_vinculo">VÍNCULO</string>
+    <string name="tablayout_questionario">QUESTIONÁRIO</string>
+    <string name="hint_nome">Nome</string>
+    <string name="hint_nome_da_mae">Mãe</string>
+    <string name="hint_nome_do_pai">Pai</string>
+    <string name="hint_sexo">Sexo</string>
+    <string name="hint_cor_raca">Cor-Raça</string>
+    <string name="hint_grupo_sanguineo">Grupo Sanguíneo</string>
+    <string name="hint_rh">RH</string>
+    <string name="hint_nacionalidade">Nacionalidade</string>
+    <string name="hint_naturalidade">Naturalidade</string>
+    <string name="hint_estado_civil">Estado Cívil</string>
+    <string name="hint_grau_de_instrucao">Grau de Instrução</string>
+    <string name="hint_rg">RG</string>
+    <string name="hint_digito">Digito</string>
+    <string name="hint_orgao_expeditor">Órgão Expeditor</string>
+    <string name="hint_estado_orgao_expeditor">Órgão Expeditor/Estado</string>
+    <string name="hint_expedicao">Expedição</string>
+    <string name="hint_titulo_eleitoral">Titulo Eleitoral</string>
+    <string name="hint_zona_eleitoral">Zona</string>
+    <string name="hint_secao">Seção</string>
+    <string name="hint_data_titulo_eleitoral">Data</string>
+    <string name="hint_carteira_de_trabalho">Carteira de Trabalho</string>
+    <string name="hint_serie">Série</string>
+    <string name="hint_serie_estado">Série/Estado</string>
+    <string name="hint_data_carteira_de_trabalho">Data</string>
+    <string name="hint_carteira_de_habilitacao">Carteira de Habilitação</string>
+    <string name="hint_categoria">Categoria</string>
+    <string name="hint_validade">Validade</string>
+    <string name="hint_pis">PIS PASEP</string>
+    <string name="hint_dependente">Possui Dependente?</string>
+    <string name="hint_deficiencia">Portador de Deficiência Física?</string>
+    <string name="hint_deficiencia_fisica">Deficiência Física</string>
+    <string name="hint_doenca_cronica">Portador de Doença Crônica</string>
+    <string name="hint_representante_legal">Representante Legal</string>
+    <string name="hint_pessoa_doente">Acompanha Pessoa Doente na Família?</string>
+    <string name="grupo_sanguineo">Grupo Sanguíneo</string>
+    <string name="hint_titulo_eleitoral_digito">Digito</string>
+    <string name="msg_atualizacao_cad_obtendo_dados">Aguarde. Obtendo dados cadastrais ...</string>
+    <string name="msg_atualizacao_cad_gravando_dados">Aguarde. Gravando dados ...</string>
+    <string name="msg_atualizacao_cad_impossivel_obter">Impossível obter os dados cadastrais. Por favor retorne para a tela principal e tente novamente!</string>
+    <string name="msg_atualizacao_cad_impossivel_recadastro">O recadastramento dos dados para sua conta não é permitido no momento!</string>
+    <string name="msg_atualizacao_cad_documentos_nome_em_branco">O campo nome não pode estar em branco!</string>
+    <string name="msg_atualizacao_cad_documentos_mae_em_branco">O campo mãe não pode estar em branco!</string>
+    <string name="msg_atualizacao_cad_documentos_data_de_nascimento_em_branco">O campo data de nascimento não pode estar em branco!</string>
+    <string name="msg_atualizacao_cad_documentos_data_de_nascimento_invalida">A data de nascimento informada é inválida!</string>
+    <string name="msg_atualizacao_cad_documentos_nacionalidade_em_branco">O campo nacionalidade não pode estar em branco!</string>
+    <string name="msg_atualizacao_cad_documentos_rg_em_branco">O campo RG não pode estar em branco!</string>
+    <string name="msg_atualizacao_cad_documentos_titulo_eleitoral_em_branco">O campo título eleitoral não pode estar em branco!</string>
+    <string name="msg_atualizacao_cad_documentos_pis_pasep_em_branco">O campo PIS/PASEP não pode estar em branco!</string>
+    <string name="msg_atualizacao_cad_documentos_deficiencia_fisica_em_branco">O campo deficiência física não pode estar em branco!</string>
+    <string name="msg_atualizacao_cad_documentos_doenca_cronica_em_branco">O campo doença crônica não pode estar em branco!</string>
+    <string name="msg_atualizacao_cad_documentos_sexo_nao_selecionado">É necessário selecionar uma opção para o sexo!</string>
+    <string name="msg_atualizacao_cad_documentos_cor_raca_nao_selecionado">É necessário selecionar uma opção para a cor/raça!</string>
+    <string name="msg_atualizacao_cad_documentos_naturalidade_nao_selecionado">É necessário selecionar uma opção para a naturalidade!</string>
+    <string name="msg_atualizacao_cad_documentos_estado_civil_nao_selecionado">É necessário selecionar uma opção para o estado civil!</string>
+    <string name="msg_atualizacao_cad_documentos_grau_instrucao_nao_selecionado">É necessário selecionar uma opção para o grau de instrução!</string>
+    <string name="msg_atualizacao_cad_documentos_deficiencia_fisica_nao_selecionado">É necessário selecionar uma opção para a deficiência física!</string>
+    <string name="msg_atualizacao_cad_documentos_doenca_cronica_nao_selecionado">É necessário selecionar uma opção para a doença crônica!</string>
+    <string name="msg_atualizacao_cad_documentos_representante_legal_nao_selecionado">É necessário selecionar uma opção para o representante legal!</string>
+    <string name="msg_atualizacao_cad_documentos_acompanha_doente_nao_selecionado">É necessário selecionar uma opção para o acompanha pessoa doente!</string>
+    <string name="msg_atualizacao_cad_impossivel_obter_dados">Impossível obter os dados para atualização cadastral!</string>
+    <string name="msg_atualizacao_cad_impossivel_gravar_dados">Impossível gravar os dados para atualização cadastral!</string>
+
+    <!-- Atualização Cadastral (endereço) -->
+    <string name="hint_tipo_endereco">Tipo de Endereço</string>
+    <string name="hint_nome_logradouro">Logradouro</string>
+    <string name="hint_numero">Número</string>
+    <string name="hint_complemento">Complemento</string>
+    <string name="hint_ponto_referencia">Ponto de Referência</string>
+    <string name="hint_bairro">Bairro</string>
+    <string name="hint_cidade">Cidade</string>
+    <string name="hint_cep">CEP</string>
+    <string name="hint_telefone_contato">Telefone de Contato</string>
+    <string name="hint_fixo">Fixo</string>
+    <string name="msg_atualizacao_cad_enderecos_tipo_nao_selecionado">É necessário selecionar uma opção para o tipo de endereço!</string>
+    <string name="msg_atualizacao_cad_enderecos_logradouro_em_branco">O campo logradouro não pode estar em branco!</string>
+    <string name="msg_atualizacao_cad_enderecos_numero_em_branco">O campo número não pode estar em branco!</string>
+    <string name="msg_atualizacao_cad_enderecos_bairro_em_branco">O campo bairro não pode estar em branco!</string>
+    <string name="msg_atualizacao_cad_enderecos_cidade_em_branco">O campo cidade não pode estar em branco!</string>
+    <string name="msg_atualizacao_cad_enderecos_cep_em_branco">O campo CEP não pode estar em branco!</string>
+    <string name="msg_atualizacao_cad_enderecos_telefone_contato_em_branco">O campo telefone de contato não pode estar em branco!</string>
+
+    <!-- Atualização Cadastral (questionario) -->
+    <string name="hint_moradia">Moradia</string>
+    <string name="hint_tipo_moradia">Tipo de Moradia</string>
+    <string name="hint_energia">Energia</string>
+    <string name="hint_agua">Água</string>
+    <string name="hint_coleta_lixo">Coleta de Lixo</string>
+    <string name="hint_esgoto">Esgoto</string>
+    <string name="hint_atividade_fisica">Atividade Física</string>
+    <string name="hint_alergia">Alergia</string>
+    <string name="hint_hipertenso">Hipertenso</string>
+    <string name="hint_diabetico">Diabético</string>
+    <string name="hint_cardiaco">Cardiaco</string>
+    <string name="hint_colesterol">Colesterol Alto</string>
+    <string name="hint_doador">Doador de Órgãos</string>
+    <string name="hint_fumar">Hábito de Fumar</string>
+    <string name="hint_habito_beber">Hábito de Beber</string>
+    <string name="msg_atualizacao_cad_questionario_moradia_nao_selecionado">É necessário selecionar uma opção para a moradia!</string>
+    <string name="msg_atualizacao_cad_questionario_tipo_moradia_nao_selecionado">É necessário selecionar uma opção para o tipo de moradia!</string>
+    <string name="msg_atualizacao_cad_questionario_energia_nao_selecionado">É necessário selecionar uma opção para a energia!</string>
+    <string name="msg_atualizacao_cad_questionario_agua_nao_selecionado">É necessário selecionar uma opção para a água!</string>
+    <string name="msg_atualizacao_cad_questionario_coleta_lixo_nao_selecionado">É necessário selecionar uma opção para a coleta de lixo!</string>
+    <string name="msg_atualizacao_cad_questionario_esgoto_nao_selecionado">É necessário selecionar uma opção para o esgoto!</string>
+    <string name="msg_atualizacao_cad_questionario_atividade_fisica_nao_selecionado">É necessário selecionar uma opção para a atividade física!</string>
+    <string name="msg_atualizacao_cad_questionario_alergia_nao_selecionado">É necessário selecionar uma opção para a alergia!</string>
+    <string name="msg_atualizacao_cad_questionario_hipertenso_nao_selecionado">É necessário selecionar uma opção para hipertenso!</string>
+    <string name="msg_atualizacao_cad_questionario_diabetico_nao_selecionado">É necessário selecionar uma opção para diabético!</string>
+    <string name="msg_atualizacao_cad_questionario_cardiaco_nao_selecionado">É necessário selecionar uma opção para cardíaco!</string>
+    <string name="msg_atualizacao_cad_questionario_colesterol_alto_nao_selecionado">É necessário selecionar uma opção para o colesterol alto!</string>
+    <string name="msg_atualizacao_cad_questionario_doador_orgaos_nao_selecionado">É necessário selecionar uma opção para doador de orgãos!</string>
+    <string name="msg_atualizacao_cad_questionario_habito_fumar_nao_selecionado">É necessário selecionar uma opção para o hábito de fumar!</string>
+    <string name="msg_atualizacao_cad_questionario_habito_beber_nao_selecionado">É necessário selecionar uma opção para o hábito de beber!</string>
+
+    <!-- Atualização Cadastral (vinculo) -->
+    <string name="hint_matricula">Matrícula</string>
+    <string name="hint_situacao">Situação</string>
+    <string name="hint_vinculo">Vínculo</string>
+    <string name="hint_orgao_pagamento">Orgão Pagamento</string>
+    <string name="hint_doc_admissao">Documento de Admissão</string>
+    <string name="hint_doc_admissao_numero">Documento de Admissão (Número)</string>
+    <string name="hint_doc_admissao_data">Documento de Admissão (Data)</string>
+    <string name="hint_data_admissao">Data de Admissão</string>
+    <string name="hint_concursado">Concursado</string>
+    <string name="hint_orgao_origem">Orgão Origem</string>
+    <string name="hint_cargo">Cargo</string>
+    <string name="hint_orgao_lotacao">Orgão Lotação</string>
+    <string name="hint_setor_lotacao">Setor Lotação</string>
+
+    <!-- Atualização Cadastral (cursos) -->
+    <string name="msg_atualizacao_cad_cursos_excluir">Deseja realmente excluir o curso selecionado?</string>
+
+    <!-- Atualização Cadastral (dependentes) -->
+    <string name="msg_atualizacao_cad_dependentes_excluir">Deseja realmente excluir o dependente selecionado?</string>
+
+    <!-- Meus dados -->
+    <string name="titulo_meu_perfil">Meu perfil</string>
+    <string name="botao_meus_dados_editar">EDITAR DADOS DE PERFIL</string>
+    <string name="botao_meus_dados_trocar_senha">TROCAR MINHA SENHA</string>
+    <string name="botao_meus_dados_enviar">ENVIAR</string>
+    <string name="hint_meus_dados_senha_atual">Senha atual</string>
+    <string name="hint_meus_dados_nova_senha">Nova senha</string>
+    <string name="hint_meus_dados_redigite_senha">Redigite a nova senha</string>
+    <string name="msg_meus_dados_obtendo">Aguarde. Obtendo dados cadastrados ...</string>
+    <string name="msg_meus_dados_impossivel_obter">Impossível obter os dados do usuário!</string>
+    <string name="msg_meus_dados_editar_enviando">Aguarde. Enviando atualização ...</string>
+    <string name="msg_meus_dados_editar_sucesso">Dados atualizados com sucesso!</string>
+    <string name="msg_meus_dados_editar_erro">Falha ao atualizar os dados de usuário!</string>
+    <string name="msg_meus_dados_trocar_senha_enviando">Aguarde. Trocando senha ...</string>
+    <string name="msg_meus_dados_trocar_senha_sucesso">Senha atualizada com sucesso!</string>
+    <string name="msg_meus_dados_trocar_senha_erro">Falha ao trocar a senha!</string>
+
+    <!-- Cadastro Novos Cursos -->
+    <string name="hint_tipo">Tipo</string>
+    <string name="hint_descricao">Descrição</string>
+    <string name="hint_instituicao">Instituição</string>
+    <string name="hint_carga_horaria">Carga Horária</string>
+    <string name="hint_data_de_conclusao">Data de Conclusão</string>
+    <string name="hint_universitario">Universitário</string>
+    <string name="msg_cadastro_novos_cursos_tipo_nao_selecionado">É necessário selecionar uma opção para o tipo de curso!</string>
+    <string name="msg_cadastro_novos_cursos_descricao_em_branco">O campo de descrição não pode estar em branco!</string>
+    <string name="msg_cadastro_novos_cursos_instituicao_em_branco">O campo instituição não pode estar em branco!</string>
+    <string name="msg_cadastro_novos_cursos_carga_horaria_invalida">O campo carga horária informado é inválido!</string>
+    <string name="msg_cadastro_novos_cursos_data_de_conclusao_em_branco">O campo data de conclusão não pode estar em branco!</string>
+    <string name="msg_cadastro_novos_cursos_data_de_conclusao_invalida">A data de conclusão informada é inválida!</string>
+
+    <!-- Cadastro Novos Dependentes -->
+    <string name="hint_tipo_dependente">Tipo Dependência</string>
+    <string name="hint_depend_ir">É Depend. IR</string>
+    <string name="hint_depend_sf">É Depend. SF</string>
+    <string name="hint_depend_medica">É Depend. Ass. Médica</string>
+    <string name="hint_fim_dependente_ir">Fim Dependência Imp. Renda</string>
+    <string name="hint_data_fim_dependente_ir">Data Fim Dependência Imp. Renda</string>
+    <string name="msg_cadastro_novos_dependentes_nome_em_branco">O campo nome não pode estar em branco!</string>
+    <string name="msg_cadastro_novos_dependentes_data_nasc_em_branco">O campo data de nascimento não pode estar em branco!</string>
+    <string name="msg_cadastro_novos_dependentes_data_nasc_invalida">A data de nascimento informada é inválida!</string>
+    <string name="msg_cadastro_novos_dependentes_universitario_nao_selecionado">É necessário selecionar uma opção para universitário!</string>
+    <string name="msg_cadastro_novos_dependentes_tipo_nao_selecionado">É necessário selecionar um tipo de dependente!</string>
+    <string name="msg_cadastro_novos_dependentes_naturalidade_em_branco">O campo naturalidade não pode estar em branco!</string>
+    <string name="msg_cadastro_novos_dependentes_nacionalidade_em_branco">O campo nacionalidade não pode estar em branco!</string>
+    <string name="msg_cadastro_novos_dependentes_ir_nao_selecionado">É necessário selecionar uma opção para dependente do IR!</string>
+    <string name="msg_cadastro_novos_dependentes_sf_nao_selecionado">É necessário selecionar uma opção para dependente do SF!</string>
+    <string name="msg_cadastro_novos_dependentes_assistencia_nao_selecionado">É necessário selecionar uma opção para dependente de assistência médica!</string>
+
+    <!-- Carta de Serviços-->
+    <string name="titulo_carta_de_serviços">Lista Completa</string>
+    <string name="msg_obtendo_dados_carta_de_servicos">Aguarde. Obtendo dados da Carta de Serviços da SECT ...</string>
+
+
+    <!-- SEFAZ DAE -->
+    <string name="label_sefazdae_titulo">Emissão de DAE</string>
+    <string name="label_sefazdae_data_vencimento">Data de Vencimento</string>
+    <string name="label_sefazdae_cnpj_orgao">CNPJ do Orgão Conveniado</string>
+    <string name="label_sefazdae_codigo_receita_tributaria">Cód.Tributario</string>
+    <string name="label_sefazdae_razao_social_contribuinte">Razão social</string>
+    <string name="label_sefazdae_tipo_documento">Tipo</string>
+    <string name="label_sefazdae_numero_documento">Número Documento</string>
+    <string name="label_sefazdae_valor_documento">Valor(R$)</string>
+    <string name="label_sefazdae_juros_documento">Juros(%)</string>
+    <string name="label_sefazdae_multa_documento">Multa(R$)</string>
+    <string name="label_sefazdae_barras_documento"></string>
+    <string name="label_sefazdae_mensagem">Mensagem</string>
+    <string name="label_sefazdae_texto_lembrete">Guarde esta guia pois ela pode ser necessaria futuramente.</string>
+    <string name="botao_sefazdae_continuar">GERAR</string>
+    <string name="msg_sefazdae_em_branco">O campo de senha não pode estar em branco!</string>
+    <string name="msg_sefazdae_data_invalida">A data informada é inválida!</string>
+    <string name="msg_sefazdae_valor_documento_invalido">O valor informado é inválido!</string>
+    <string name="msg_sefazdar_gerando">Aguarde. Gerando DAE ...</string>
+
+
+
+
+    <!-- SEFAZ DAE BOLETO-->
+    <string name="label_sefazdae_boleto_sucesso">Documento Arrecadatório</string>
+    <string name="label_sefazdae_boleto_insucesso">Problemas na geração</string>
+    <string name="label_sefazdae_boleto_titulo_erro">Erro</string>
+    <string name="label_sefazdae_boleto_mensagem_rodape">Dentro de alguns minutos você receberá um e-mail em sua caixa postal.</string>
+    <string name="botao_sefazdae_boleto_finalizar">FINALIZAR</string>
+    <string name="label_sefazdae_boleto_mensagem_retorno_sefaz">...</string>
+    <string name="label_sefazdae_boleto_barcode_sample">85660000001010002902017111028688360041000381</string>
+
+</resources>

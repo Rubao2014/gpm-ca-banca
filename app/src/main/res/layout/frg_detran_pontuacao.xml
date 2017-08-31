@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/branco"
+    android:orientation="vertical">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!-- EDITTEXT NOME -->
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/inputNome"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/txtPontuacao"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:maxLength="100"
+                    android:inputType="text"
+                    android:selectAllOnFocus="true"
+                    android:hint="@string/hint_detran_seus_pontos"
+                    android:text="0"
+                    android:textSize="150sp"
+                    android:textAlignment="center"
+                    android:clickable="false" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <!-- EDITTEXT NOME MAE -->
+
+            <!-- EDITTEXT NOME PAI -->
+
+            <!-- SPINNER SEXO -->
+
+            <!-- SPINNER COR/RAÇA -->
+
+            <!-- EDITTEXT DATA DE NASCIMENTO -->
+
+            <!-- SPINNER GRUPO SANGUÍNEO-->
+
+            <!-- SPINNER GRUPO SANGUÍNEO RH-->
+
+            <!-- EDITTEXT NACIONALIDADE -->
+
+            <!-- SPINNER NATURALIDADE-->
+
+            <!-- SPINNER ESTADO CIVIL-->
+
+            <!-- SPINNER GRAU DE INSTRUÇÃO-->
+
+            <!-- EDITTEXT RG -->
+
+            <!-- EDITTEXT DIGITO DO RG -->
+
+            <!-- EDITTEXT ORGAO EXPEDITOR -->
+
+            <!-- SPINNER ORGÃO EXPEDITOR/ESTADO-->
+
+            <!-- EDITTEXT EXPEDIÇAO -->
+
+            <!-- EDITTEXT TITULO ELEITORAL -->
+
+            <!-- EDITTEXT TITULO ELEITORAL DIGITO -->
+
+            <!-- EDITTEXT ZONA ELEITORAL -->
+
+            <!-- EDITTEXT SEÇÃO -->
+
+            <!-- EDITTEXT DATA TITULO ELEITORAL -->
+
+            <!-- EDITTEXT CARTEIRA DE TRABALHO -->
+
+            <!-- EDITTEXT SERIE -->
+
+            <!-- SPINNER SERIE/ESTADO -->
+
+            <!-- EDITTEXT DATA CARTEIRA DE TRABALHO -->
+
+            <!-- EDITTEXT CARTEIRA DE HABILITAÇÃO -->
+
+            <!-- EDITTEXT CATEGORIA DA CARTEIRA DE HABILITAÇÃO -->
+
+            <!-- EDITTEXT VALIDADE -->
+
+            <!-- EDITTEXT PIS PASEP -->
+
+            <!-- SPINNER PORTADOR DE DEFICIENCIA FÍSICA? -->
+
+            <!-- EDITTEXT DEFICIENCIA FÍSICA -->
+
+            <!-- SPINNER DOENÇA CRÔNICA -->
+
+            <!-- EDITTEXT DOENÇA CRÔNICA -->
+
+            <!-- SPINNER REPRESENTANTE LEGAL -->
+
+            <!-- SPINNER ACOMPANHA PESSOA DOENTE? -->
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>
