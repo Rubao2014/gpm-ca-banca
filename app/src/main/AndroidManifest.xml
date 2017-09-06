@@ -125,6 +125,10 @@
 
 
         <!-- TELA DO MATRICULA ESCOLAR -->
+        <activity android:name="br.gov.ba.prefeitura.gpmapp.telas.FrmSeducMatriculaEscolar"
+            android:screenOrientation="portrait">
+
+        </activity>
         <activity android:name="br.gov.ba.prefeitura.gpmapp.telas.FrmSeducMatriculaEscolarInicio"
             android:screenOrientation="portrait">
 

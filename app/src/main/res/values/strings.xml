@@ -27,6 +27,7 @@
     <string name="toolbar_gerar_dae">Gere a sua guia</string>
     <string name="toolbar_seduc">Educação</string>
 
+
     <!-- Todos os menus -->
     <string name="menu_gravar">&#160;&#160;Gravar</string>
 
@@ -428,33 +429,42 @@
 
 
     <!-- MATRICULA ESCOLAR  -->
-    <string name="label_seduc_matricula_escolar">Matricula Escolar</string>
+    <string name="label_seduc_matricula_escolar">Matricula Infantil</string>
     <string name="label_seduc_inscricoes">Inscrições</string>
+    <string name="label_seduc_nova_inscricao">Nova Inscrição</string>
     <string name="label_seduc_inscricao_ano">Ano Inscrição</string>
     <string name="label_seduc_inscricao_numero">Núm. Inscrição</string>
-    <string name="label_seduc_nome_aluno">Nome do aluno</string>
+    <string name="label_seduc_nome_aluno">Nome do Aluno</string>
+    <string name="label_seduc_rg_aluno">RG do Aluno</string>
     <string name="label_seduc_resp01">Nome Responsavel 01(Ex. Pai)</string>
     <string name="label_seduc_resp01_short">Responsável:</string>
+    <string name="label_seduc_cpfResponsavel_01">CPF Responsavel 01</string>
     <string name="label_seduc_resp02">Nome Responsavel 02(Ex. Mãe)</string>
     <string name="label_seduc_data_nasc">Data de Nasc. Aluno</string>
+    <string name="label_seduc_sexo_aluno">Sexo Aluno</string>
     <string name="label_seduc_escola">Escola</string>
     <string name="label_seduc_serie">Serie</string>
     <string name="label_seduc_bolsa_familia">Tem Bolsa Família?</string>
     <string name="label_seduc_irmao_gemeo">Aluno tem irmão(s) gemeo(s)?</string>
+    <string name="label_seduc_deficiente">Portador deficiencia?</string>
     <string name="label_seduc_irmao_gemeo_short">Gemeo(s)?</string>
     <string name="label_seduc_justificativa">Justificativa</string>
     <string name="label_seduc_status">Status</string>
     <string name="label_seduc_mensagem">Mensagem</string>
     <string name="label_seduc_texto_lembrete">Guarde estes dados pois eles poderão ser necessarios futuramente.</string>
-    <string name="botao_seduc_continuar">Nova Inscrição</string>
+    <string name="botao_seduc_continuar">Fazer Nova Inscrição</string>
     <string name="botao_seduc_continuar2">Avançar</string>
     <string name="botao_seduc_confirmar">Confirmar</string>
     <string name="botao_seduc_voltar">Voltar</string>
     <string name="msg_seduc_em_branco">O campo de senha não pode estar em branco!</string>
-    <string name="msg_seduc_data_invalida">A data informada é inválida!</string>
-    <string name="msg_seduc_valor_documento_invalido">O valor informado é inválido!</string>
+    <string name="msg_seduc_data_nasc_invalida">A data de nascimento é inválida!</string>
+    <string name="msg_seduc_nome_invalido">O nome informado é inválido!</string>
     <string name="msg_seduc_obtendo">Aguarde. Obtendo inscrições ...</string>
+    <string name="msg_seduc_enviando_dados">Enviando inscrição ...</string>
+    <string name="msg_seduc_obtendo_escolas">Aguarde. Obtendo escolas ...</string>
     <string name="msg_seduc_obtendo_detalhamento">Aguarde. Obtendo detalhamento ...</string>
+    <string name="msg_seduc_inscricao_enviada_sucesso">Inscrição realizada com sucesso!</string>
+    <string name="msg_seduc_inscricao_enviada_erro">Falha na inscrição. Tente novamente mais tarde.</string>
     <string name="list_view_contrato_nr_label"></string>
     <string name="list_view_contrato_val_label"></string>
     <string name="custom_list_view_label_num_matricula">Número da Inscrição</string>

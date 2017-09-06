@@ -52,7 +52,7 @@ public class FrmCadastroCelular extends ActivityBase implements View.OnClickList
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         inputCelular = (TextInputLayout) findViewById(R.id.inputCelular);
         txtCelular = (EditText) findViewById(R.id.txtCelular);
-        cmdContinuar = (Button) findViewById(R.id.cmdContinuar);
+        cmdContinuar = (Button) findViewById(R.id.cmdEnviarInscricao);
 
         //coloca a mascara nos campos
         textWatcherCelular = MascaraCampos.insert("(##)#####-####", txtCelular);

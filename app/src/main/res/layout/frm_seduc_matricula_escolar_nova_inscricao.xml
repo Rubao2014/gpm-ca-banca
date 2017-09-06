@@ -93,16 +93,58 @@
                             android:layout_height="match_parent"
                             android:layout_marginTop="10dp">
 
-        <!-- ALUNO -->
+        <!-- NOME ALUNO -->
                             <EditText
                                 android:id="@+id/txtNomeAluno"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:hint="@string/label_seduc_nome_aluno"
                                 android:inputType="text"
+                                android:maxLength="100"
+                                android:selectAllOnFocus="true"
+                                android:singleLine="true" />
+
+
+                        </android.support.design.widget.TextInputLayout>
+
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/inputRGAluno"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="10dp">
+
+       <!-- RG DO ALUNO -->
+                            <EditText
+                                android:id="@+id/txtRGAluno"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/label_seduc_rg_aluno"
+                                android:inputType="text"
+                                android:maxLength="12"
+                                android:selectAllOnFocus="true"
+                                android:singleLine="true" />
+
+
+                        </android.support.design.widget.TextInputLayout>
+
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/inputDataNascimentoAluno"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="10dp">
+
+                            <!-- DATA DE NASC -->
+                            <EditText
+                                android:id="@+id/txtDataNascimentoAluno"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/label_seduc_data_nasc"
+                                android:inputType="number"
                                 android:maxLength="10"
                                 android:selectAllOnFocus="true"
                                 android:singleLine="true" />
+
+
 
 
                         </android.support.design.widget.TextInputLayout>
@@ -120,13 +162,29 @@
                                 android:layout_height="wrap_content"
                                 android:hint="@string/label_seduc_resp01"
                                 android:inputType="text"
-                                android:maxLength="10"
+                                android:maxLength="100"
                                 android:selectAllOnFocus="true"
                                 android:singleLine="true" />
+                        </android.support.design.widget.TextInputLayout>
+
+                        <android.support.design.widget.TextInputLayout
+                                android:id="@+id/inputCPFResponsavel"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="10dp">
+      <!-- CPF RESPONSAVEL -->
+                                <EditText
+                                    android:id="@+id/txtCPFResponsavel"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="@string/label_seduc_cpfResponsavel_01"
+                                    android:inputType="number"
+                                    android:maxLength="100"
+                                    android:selectAllOnFocus="true"
+                                    android:singleLine="true" />
 
 
                         </android.support.design.widget.TextInputLayout>
-
 
                         <android.support.design.widget.TextInputLayout
                             android:id="@+id/inputNomeResponsavel02"
@@ -141,32 +199,44 @@
                                 android:layout_height="wrap_content"
                                 android:hint="@string/label_seduc_resp02"
                                 android:inputType="text"
-                                android:maxLength="10"
+                                android:maxLength="100"
                                 android:selectAllOnFocus="true"
                                 android:singleLine="true" />
 
 
                         </android.support.design.widget.TextInputLayout>
 
+
+
+
                         <android.support.design.widget.TextInputLayout
-                            android:id="@+id/idDataNascimento"
+                            android:id="@+id/idSexoAluno"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_marginTop="10dp">
 
-        <!-- DATA DE NASC -->
-                            <EditText
-                                android:id="@+id/txtDataNascimento"
+                            <TextView
+                                android:id="@+id/txtSexoAlunoLabel"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:hint="@string/label_seduc_data_nasc"
-                                android:inputType="number"
-                                android:maxLength="10"
-                                android:selectAllOnFocus="true"
-                                android:singleLine="true" />
+                                android:layout_weight="1"
+                                android:text="@string/label_seduc_sexo_aluno" />
+
+       <!-- SEXO -->
+
+
+                            <Spinner
+                                android:id="@+id/txtSexoAluno"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:hint="@string/label_seduc_sexo_aluno"
+
+                                android:selectAllOnFocus="true" />
 
 
                         </android.support.design.widget.TextInputLayout>
+
 
                         <android.support.design.widget.TextInputLayout
                             android:id="@+id/idEscola"
@@ -174,16 +244,23 @@
                             android:layout_height="match_parent"
                             android:layout_marginTop="10dp">
 
+                            <TextView
+                                android:id="@+id/txtEscolaLabel"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/label_seduc_escola" />
+
         <!-- ESCOLA -->
-                            <EditText
+
+
+                            <Spinner
                                 android:id="@+id/txtNomeEscola"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:layout_weight="1"
                                 android:hint="@string/label_seduc_escola"
-                                android:inputType="text"
-                                android:maxLength="10"
-                                android:selectAllOnFocus="true"
-                                android:singleLine="true" />
+
+                                android:selectAllOnFocus="true" />
 
 
                         </android.support.design.widget.TextInputLayout>
@@ -195,15 +272,21 @@
                             android:layout_marginTop="10dp">
 
         <!-- SERIE -->
-                            <EditText
+
+                            <TextView
+                                android:id="@+id/txtSerieLabel"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/label_seduc_serie" />
+
+                            <Spinner
                                 android:id="@+id/txtSerie"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:layout_weight="1"
                                 android:hint="@string/label_seduc_serie"
-                                android:inputType="text|number"
-                                android:maxLength="10"
-                                android:selectAllOnFocus="true"
-                                android:singleLine="true" />
+
+                                android:selectAllOnFocus="true" />
 
 
                         </android.support.design.widget.TextInputLayout>
@@ -216,14 +299,13 @@
 
         <!-- BOLSA FAMILIA -->
                             <CheckBox
-                                android:id="@+id/checkboxTemBolsaFabilia"
+                                android:id="@+id/checkboxTemBolsaFamilia"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:hint="@string/label_seduc_bolsa_familia"
                                 android:selectAllOnFocus="true"
-                                android:text="CheckBox"
-                                tools:text="@string/label_seduc_bolsa_familia" />
+                                android:text="@string/label_seduc_bolsa_familia" />
 
 
                         </android.support.design.widget.TextInputLayout>
@@ -241,30 +323,30 @@
                                 android:layout_weight="1"
                                 android:hint="@string/label_seduc_irmao_gemeo"
                                 android:selectAllOnFocus="true"
-                                android:text="CheckBox"
-                                tools:text="@string/label_seduc_irmao_gemeo" />
+                                android:text="@string/label_seduc_irmao_gemeo" />
 
 
                         </android.support.design.widget.TextInputLayout>
 
-                        <!--
                         <android.support.design.widget.TextInputLayout
-                            android:id="@+id/inputTipo"
+                            android:id="@+id/idDeficiente"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_marginTop="10dp">
 
-                            <EditText
-                                android:id="@+id/txtTipo"
+         <!-- DEFICIENTE? -->
+                            <CheckBox
+                                android:id="@+id/checkboxDeficiente"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:hint="@string/label_sefazdae_tipo_documento"
-                                android:inputType="number"
-                                android:maxLength="30"
+                                android:layout_weight="1"
+                                android:hint="@string/label_seduc_deficiente"
                                 android:selectAllOnFocus="true"
-                                android:singleLine="true" />
+                                android:text="@string/label_seduc_deficiente" />
+
+
                         </android.support.design.widget.TextInputLayout>
--->
+
 
                         <LinearLayout
                             android:id="@+id/sv02"
@@ -275,7 +357,7 @@
                             android:orientation="vertical">
 
                             <Button
-                                android:id="@+id/cmdContinuar"
+                                android:id="@+id/cmdEnviarInscricao"
                                 style="@style/BotoesTelas"
                                 android:layout_width="match_parent"
                                 android:layout_height="@dimen/tamanho_botao"

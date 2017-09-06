@@ -52,7 +52,7 @@ public class FrmCadastroNascimento extends ActivityBase implements View.OnClickL
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         inputDataNascimento = (TextInputLayout) findViewById(R.id.inputDataNascimento);
         txtDataNascimento = (EditText) findViewById(R.id.txtDataNascimento);
-        cmdContinuar = (Button) findViewById(R.id.cmdContinuar);
+        cmdContinuar = (Button) findViewById(R.id.cmdEnviarInscricao);
 
         //coloca a mascara nos campos
         textWatcherDataNascimento = MascaraCampos.insert("##/##/####", txtDataNascimento);

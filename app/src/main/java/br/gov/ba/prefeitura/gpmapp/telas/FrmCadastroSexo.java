@@ -55,7 +55,7 @@ public class FrmCadastroSexo extends ActivityBase implements View.OnClickListene
 
         // Obtem os controles
         toolbar = (Toolbar) findViewById(R.id.toolbar);
-        cmdContinuar = (Button) findViewById(R.id.cmdContinuar);
+        cmdContinuar = (Button) findViewById(R.id.cmdEnviarInscricao);
         lnlSexoMasculino = (LinearLayout) findViewById(R.id.lnlSexoMasculino);
         lnlSexoFeminino = (LinearLayout) findViewById(R.id.lnlSexoFeminino);
         imgMasculino = (ImageView) findViewById(R.id.imgMasculino);

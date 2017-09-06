@@ -35,15 +35,12 @@ import br.gov.ba.prefeitura.gpmapp.models.Matricula;
 import br.gov.ba.prefeitura.gpmapp.models.Matriculas;
 import br.gov.ba.prefeitura.gpmapp.tasks.TaskObtemToken;
 import br.gov.ba.prefeitura.gpmapp.tasks.TaskSeducGet;
-import br.gov.ba.prefeitura.gpmapp.tasks.TaskSefazGerarDAE;
 import br.gov.ba.prefeitura.gpmapp.util.Apoio;
 import br.gov.ba.prefeitura.gpmapp.util.DialogAlerta;
 import br.gov.ba.prefeitura.gpmapp.util.IRetornoMASCallbackJSON;
 import br.gov.ba.prefeitura.gpmapp.util.LogTrace;
 import br.gov.ba.prefeitura.gpmapp.util.RetornoMASCallbackJSON;
 import br.gov.ba.prefeitura.gpmapp.util.RetornoMASConnectionListener;
-
-import static com.ca.mas.foundation.MAS.getContext;
 
 /**
  * Classe FrmCadastroSenha
@@ -52,7 +49,7 @@ public class FrmSeducMatriculaEscolarInicio extends ActivityBase implements View
 {
     // Controles da classe
     private Toolbar toolbar = null;
-    private Button cmdContinuarMatricula = null;
+    private Button cmdFazerNovaInscricao = null;
     private ProgressDialog progressDialogMeusDados = null;
     private CoordinatorLayout coordinatorLayoutAtualizacaoCad = null;
 
@@ -146,7 +143,7 @@ public class FrmSeducMatriculaEscolarInicio extends ActivityBase implements View
         toolbar = (Toolbar) findViewById(R.id.toolbar);
 
         //Botao Continuar Matricula
-        cmdContinuarMatricula = (Button) findViewById(R.id.cmdContinuarMatricula);
+        cmdFazerNovaInscricao = (Button) findViewById(R.id.cmdFazerNovaInscricao);
 
         //Preenche Matriculas com valores Dummy
         //createMatriculas(DUMMY_JSON_LIST_RESPONSE);
@@ -162,7 +159,7 @@ public class FrmSeducMatriculaEscolarInicio extends ActivityBase implements View
         toolbar.setNavigationContentDescription(Apoio.TOOLBAR_VOLTAR);
 
         //Seta o listener dos controles
-        cmdContinuarMatricula.setOnClickListener(this);
+        cmdFazerNovaInscricao.setOnClickListener(this);
 
         //Coloca a toolbar como actionbar e adiciona as opções de menu
         setSupportActionBar(toolbar);
@@ -194,7 +191,7 @@ public class FrmSeducMatriculaEscolarInicio extends ActivityBase implements View
 
          */
 
-        uri = mobileSso.getURI(getString(R.string.url_conexao_gateway) + "gpm/ba/spm/smec/matesc/v1/minhas_inscricoes?cpf=123.123.123-87");
+        uri = mobileSso.getURI(getString(R.string.url_conexao_gateway) + "gpm/ba/spm/smec/matesc/v1/minhas_inscricoes?cpf=286.883.638-03");
         builder = new MASRequest.MASRequestBuilder(uri);
         builder.header("Content-Type", "application/json");
 
@@ -300,13 +297,15 @@ public class FrmSeducMatriculaEscolarInicio extends ActivityBase implements View
         try
         {
             //Quando apertar o botão entrar
-            if (view == cmdContinuarMatricula)
+            if (view == cmdFazerNovaInscricao)
             {
                 /*
                 * [RUBENS] Realiza nova inscriçao
                 * Chama tela de nova inscricao de matricular
                 */
-                realizaComunicacaoValidacaoToken();
+                //realizaComunicacaoValidacaoToken();
+                Intent intent = new Intent(this, FrmSeducMatriculaEscolar.class);
+                startActivityForResult(intent, Apoio.RETORNO_TELA_SEDUC);
             }
         }
         catch (Exception err)

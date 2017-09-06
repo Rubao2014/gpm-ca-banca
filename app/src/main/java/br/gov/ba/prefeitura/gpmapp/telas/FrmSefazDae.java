@@ -144,7 +144,7 @@ public class FrmSefazDae extends ActivityBase implements View.OnClickListener, I
 
         //inputConfirmarSenha = (TextInputLayout) findViewById(R.id.inputConfirmarSenha);
         //txtConfirmarSenha = (EditText) findViewById(R.id.txtConfirmarSenha);
-        cmdContinuar = (Button) findViewById(R.id.cmdContinuar);
+        cmdContinuar = (Button) findViewById(R.id.cmdEnviarInscricao);
 
         //coloca a mascara nos campos
         textWatcherDataVencimento = MascaraCampos.insert("##/##/####", txtDataVencimento);
@@ -299,10 +299,6 @@ public class FrmSefazDae extends ActivityBase implements View.OnClickListener, I
        return (myMap.get(sOpcao));
 
     }
-
-
-
-
 
     /**
      * Chama a tela de finalizado

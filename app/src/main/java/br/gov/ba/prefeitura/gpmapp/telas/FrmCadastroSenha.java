@@ -58,7 +58,7 @@ public class FrmCadastroSenha extends ActivityBase implements View.OnClickListen
         txtSenha = (EditText) findViewById(R.id.txtSenha);
         inputConfirmarSenha = (TextInputLayout) findViewById(R.id.inputConfirmarSenha);
         txtConfirmarSenha = (EditText) findViewById(R.id.txtConfirmarSenha);
-        cmdContinuar = (Button) findViewById(R.id.cmdContinuar);
+        cmdContinuar = (Button) findViewById(R.id.cmdEnviarInscricao);
 
         //Muda a cor da flecha padrão do Android para branco
         drawableArrow = ContextCompat.getDrawable(this, R.drawable.abc_ic_ab_back_material);

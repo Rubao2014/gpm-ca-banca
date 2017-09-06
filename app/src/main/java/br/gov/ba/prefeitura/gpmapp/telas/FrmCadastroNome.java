@@ -49,7 +49,7 @@ public class FrmCadastroNome extends ActivityBase implements View.OnClickListene
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         inputNome = (TextInputLayout) findViewById(R.id.inputNome);
         txtNome = (EditText) findViewById(R.id.txtNome);
-        cmdContinuar = (Button) findViewById(R.id.cmdContinuar);
+        cmdContinuar = (Button) findViewById(R.id.cmdEnviarInscricao);
 
         //Muda a cor da flecha padrão do Android para branco
         drawableArrow = ContextCompat.getDrawable(this, R.drawable.abc_ic_ab_back_material);

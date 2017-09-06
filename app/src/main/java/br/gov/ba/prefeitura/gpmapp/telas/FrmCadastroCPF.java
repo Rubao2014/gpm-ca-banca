@@ -53,7 +53,7 @@ public class FrmCadastroCPF extends ActivityBase implements View.OnClickListener
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         inputCPF = (TextInputLayout) findViewById(R.id.inputCPF);
         txtCPF = (EditText) findViewById(R.id.txtCPF);
-        cmdContinuar = (Button) findViewById(R.id.cmdContinuar);
+        cmdContinuar = (Button) findViewById(R.id.cmdEnviarInscricao);
 
         //coloca a mascara nos campos
         textWatcherCPF = MascaraCampos.insert("###.###.###-##", txtCPF);

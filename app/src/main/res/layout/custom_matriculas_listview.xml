@@ -20,22 +20,23 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/textViewContractNumber"
-        android:layout_alignTop="@+id/imageViewStatus"
         android:text="@string/custom_list_view_label_num_matricula"
         android:textSize="8sp"
-        tools:textColor="?android:attr/textColorSecondaryInverseNoDisable" />
+        tools:textColor="?android:attr/textColorSecondaryInverseNoDisable"
+        android:layout_alignBaseline="@+id/textView6"
+        android:layout_alignBottom="@+id/textView6"
+        android:layout_alignStart="@+id/textView6" />
 
     <TextView
-        android:text="20160114460"
+        android:id="@+id/textViewContractNumber"
         android:layout_width="120dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="39dp"
-        android:id="@+id/textViewContractNumber"
         android:gravity="center_vertical"
-        android:layout_below="@+id/textView6"
+        android:text="20160114460"
+        android:textSize="18sp"
+        android:layout_alignBottom="@+id/imageViewStatus"
         android:layout_toEndOf="@+id/imageViewStatus"
-        android:layout_alignBottom="@+id/imageViewStatus" />
+        android:layout_marginStart="20dp" />
 
 
     <ImageView
@@ -49,15 +50,4 @@
         android:layout_marginTop="6dp"
         app:srcCompat="@drawable/form" />
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="32dp"
-        android:layout_height="32dp"
-        android:layout_marginEnd="28dp"
-        android:scaleY="0.50"
-        app:srcCompat="@drawable/next"
-        tools:scaleX="0.50"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignBottom="@+id/textViewContractNumber" />
 </RelativeLayout>

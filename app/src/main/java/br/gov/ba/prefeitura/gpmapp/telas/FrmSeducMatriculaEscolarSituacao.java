@@ -210,8 +210,8 @@ public class FrmSeducMatriculaEscolarSituacao extends ActivityBase implements Vi
         txtDataNascimentoValue.setText(m.getTxtDataNascimentoValue());
         txtEscolaValue.setText(m.getTxtEscolaValue());
         txtSerieValue.setText(m.getTxtSerieValue());
-        txtBolsaFamiliaValue.setText(m.getTxtBolsaFamiliaValue());
-        txtIrmaoGemeoValue.setText(m.getTxtIrmaoGemeoValue());
+        txtBolsaFamiliaValue.setText(Apoio.retornaAtivoOuNao(m.getTxtBolsaFamiliaValue()));
+        txtIrmaoGemeoValue.setText(Apoio.retornaAtivoOuNao(m.getTxtIrmaoGemeoValue()));
         txtJustificativaValue.setText(m.getTxtJustificativaValue());
 
     }
