@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/branco"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        style="@style/AppToolbar"
+        app:title="@string/toolbar_seduc"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/espaco_tela"
+        android:paddingRight="@dimen/espaco_tela"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/tamanho_zero"
+            android:layout_weight="12"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                style="@style/TextoTituloTelas"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/tamanho_label_clique"
+                android:layout_marginTop="15dp"
+                android:gravity="center_vertical"
+                android:text="@string/label_seduc_matricula_escolar" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/tamanho_zero"
+            android:layout_weight="3"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/tamanho_faixa"
+                android:layout_marginRight="30dp"
+                android:background="@color/colorPrimary" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/tamanho_faixa"
+                android:layout_marginLeft="30dp"
+                android:background="@color/colorPrimaryDark" />
+
+        </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/tamanho_zero"
+                android:layout_weight="70"
+                android:gravity="center_horizontal|top"
+                android:orientation="vertical">
+
+                <!--
+                    <string name="label_seduc_aluno">Aluno</string>
+                    <string name="label_seduc_resp01">Responsavel 01 (Ex. Pai)</string>
+                    <string name="label_seduc_resp02">Responsavel 02 (Ex. Mãe)</string>
+                    <string name="label_seduc_data_nasc">Data de Nasc. Aluno</string>
+                    <string name="label_seduc_escola">Escola</string>
+                    <string name="label_seduc_serie">Serie</string>
+                    <string name="label_seduc_bolsa_familia">Bolsa Família</string>
+                    <string name="label_seduc_irmao_gemeo">Irmão Gemeo</string>
+                -->
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:id="@+id/sv01"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/inputNomeAluno"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="10dp">
+
+        <!-- ALUNO -->
+                            <EditText
+                                android:id="@+id/txtNomeAluno"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/label_seduc_nome_aluno"
+                                android:inputType="text"
+                                android:maxLength="10"
+                                android:selectAllOnFocus="true"
+                                android:singleLine="true" />
+
+
+                        </android.support.design.widget.TextInputLayout>
+
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/inputNomeResponsavel01"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="10dp">
+
+        <!-- RESPONSAVEL 01 -->
+                            <EditText
+                                android:id="@+id/txtNomeResponsavel01"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/label_seduc_resp01"
+                                android:inputType="text"
+                                android:maxLength="10"
+                                android:selectAllOnFocus="true"
+                                android:singleLine="true" />
+
+
+                        </android.support.design.widget.TextInputLayout>
+
+
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/inputNomeResponsavel02"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="10dp">
+
+        <!-- RESPONSAVEL 02 -->
+                            <EditText
+                                android:id="@+id/txtNomeResponsavel02"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/label_seduc_resp02"
+                                android:inputType="text"
+                                android:maxLength="10"
+                                android:selectAllOnFocus="true"
+                                android:singleLine="true" />
+
+
+                        </android.support.design.widget.TextInputLayout>
+
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/idDataNascimento"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="10dp">
+
+        <!-- DATA DE NASC -->
+                            <EditText
+                                android:id="@+id/txtDataNascimento"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/label_seduc_data_nasc"
+                                android:inputType="number"
+                                android:maxLength="10"
+                                android:selectAllOnFocus="true"
+                                android:singleLine="true" />
+
+
+                        </android.support.design.widget.TextInputLayout>
+
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/idEscola"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="10dp">
+
+        <!-- ESCOLA -->
+                            <EditText
+                                android:id="@+id/txtNomeEscola"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/label_seduc_escola"
+                                android:inputType="text"
+                                android:maxLength="10"
+                                android:selectAllOnFocus="true"
+                                android:singleLine="true" />
+
+
+                        </android.support.design.widget.TextInputLayout>
+
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/idSerie"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="10dp">
+
+        <!-- SERIE -->
+                            <EditText
+                                android:id="@+id/txtSerie"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/label_seduc_serie"
+                                android:inputType="text|number"
+                                android:maxLength="10"
+                                android:selectAllOnFocus="true"
+                                android:singleLine="true" />
+
+
+                        </android.support.design.widget.TextInputLayout>
+
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/idBolsaFamilia"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="10dp">
+
+        <!-- BOLSA FAMILIA -->
+                            <CheckBox
+                                android:id="@+id/checkboxTemBolsaFabilia"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:hint="@string/label_seduc_bolsa_familia"
+                                android:selectAllOnFocus="true"
+                                android:text="CheckBox"
+                                tools:text="@string/label_seduc_bolsa_familia" />
+
+
+                        </android.support.design.widget.TextInputLayout>
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/idTemIrmaoGemeo"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="10dp">
+
+        <!-- TEM IRMAOS GEMEOS? -->
+                            <CheckBox
+                                android:id="@+id/checkboxTemImaoGemeo"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:hint="@string/label_seduc_irmao_gemeo"
+                                android:selectAllOnFocus="true"
+                                android:text="CheckBox"
+                                tools:text="@string/label_seduc_irmao_gemeo" />
+
+
+                        </android.support.design.widget.TextInputLayout>
+
+                        <!--
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/inputTipo"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="10dp">
+
+                            <EditText
+                                android:id="@+id/txtTipo"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/label_sefazdae_tipo_documento"
+                                android:inputType="number"
+                                android:maxLength="30"
+                                android:selectAllOnFocus="true"
+                                android:singleLine="true" />
+                        </android.support.design.widget.TextInputLayout>
+-->
+
+                        <LinearLayout
+                            android:id="@+id/sv02"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="15"
+                            android:gravity="center_horizontal|bottom"
+                            android:orientation="vertical">
+
+                            <Button
+                                android:id="@+id/cmdContinuar"
+                                style="@style/BotoesTelas"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/tamanho_botao"
+                                android:layout_marginBottom="15dp"
+                                android:text="@string/botao_seduc_confirmar" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </ScrollView>
+
+            </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

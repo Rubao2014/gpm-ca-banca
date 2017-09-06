@@ -22,6 +22,10 @@ import android.widget.Button;
 
 import com.ca.mas.foundation.MASUser;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.io.File;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -72,6 +76,9 @@ public class Apoio
     public static final String PREFS_SEFAZ_MENSAGEM_RETORNO_SERVICO = "prefs_sefaz_mensagem_retorno_servico";
 
 
+    //Constantes de preferencia Seduc
+    public static final String PREFS_SEDUC_INSCRICAO = "prefs_seduc_inscricao";
+
     // Contastantes referente a data
     public static final int DATA_COMPLETA = 1;
     public static final int DATA_HORA = 2;
@@ -95,6 +102,7 @@ public class Apoio
     public static final int DADOS_CADASTRAIS_GRAVACAO = 7;
     public static final int TIPO_COMUNICACAO_DADOS_CADASTRAIS_ENVIO_FOTOS = 8;
     public static final int TIPO_COMUNICACAO_CARTA_SERVICOS = 9;
+    public static final int TIPO_COMUNICACAO_EDUCACAO = 10;
 
     //Constantes para timeout de comunicação
     public static final int TIME_OUT_COMUNICACAO = 30;
@@ -125,6 +133,7 @@ public class Apoio
     //Constantes de retorno de tela
     public static final int RETORNO_TELA_DETRAN = 1;
     public static final int RETORNO_TELA_SEFAZ = 11;
+    public static final int RETORNO_TELA_SEDUC = 12;
     public static final int RETORNO_TELA_ESQUECI_MINHA_SENHA = 2;
     public static final int RETORNO_TELA_DASHBOARD = 3;
     public static final int RETORNO_TELA_ATUALIZACAO_CURSOS_CADASTRO = 4;
@@ -168,6 +177,20 @@ public class Apoio
     public static String CELULAR_PATTERN = "^\\([0-9]{2}\\)[9]{1}[2-9]{1}[0-9]{3}\\-[0-9]{4}$";
 
 
+    /**
+     * Limpa as preferencias de cadastro
+     */
+    public static void limpaPreferenciasCadastro(Context context) throws Exception
+    {
+        //Faz a limpeza das preferencias
+        Apoio.gravaPrefsValorString(context, Apoio.PREFS_CADASTRO_NOME, "");
+        Apoio.gravaPrefsValorString(context, Apoio.PREFS_CADASTRO_CPF, "");
+        Apoio.gravaPrefsValorString(context, Apoio.PREFS_CADASTRO_DATA_NASC, "");
+        Apoio.gravaPrefsValorString(context, Apoio.PREFS_CADASTRO_CELULAR, "");
+        Apoio.gravaPrefsValorString(context, Apoio.PREFS_CADASTRO_EMAIL, "");
+        Apoio.gravaPrefsValorString(context, Apoio.PREFS_CADASTRO_SENHA, "");
+        Apoio.gravaPrefsValorInteiro(context, Apoio.PREFS_CADASTRO_SEXO, 0);
+    }
 
     /**
      * Obtem a data e hora de compilacao
@@ -685,6 +708,7 @@ public class Apoio
         activity.finish();
     }
 
+
     /**
      * Verifica se existe um conexão
      */
@@ -988,21 +1012,6 @@ public class Apoio
         }
 
         return bRet;
-    }
-
-    /**
-     * Limpa as preferencias de cadastro
-     */
-    public static void limpaPreferenciasCadastro(Context context) throws Exception
-    {
-        //Faz a limpeza das preferencias
-        Apoio.gravaPrefsValorString(context, Apoio.PREFS_CADASTRO_NOME, "");
-        Apoio.gravaPrefsValorString(context, Apoio.PREFS_CADASTRO_CPF, "");
-        Apoio.gravaPrefsValorString(context, Apoio.PREFS_CADASTRO_DATA_NASC, "");
-        Apoio.gravaPrefsValorString(context, Apoio.PREFS_CADASTRO_CELULAR, "");
-        Apoio.gravaPrefsValorString(context, Apoio.PREFS_CADASTRO_EMAIL, "");
-        Apoio.gravaPrefsValorString(context, Apoio.PREFS_CADASTRO_SENHA, "");
-        Apoio.gravaPrefsValorInteiro(context, Apoio.PREFS_CADASTRO_SEXO, 0);
     }
 
     /**
@@ -1500,5 +1509,17 @@ public class Apoio
         return sRetorno;
     }
 
+    public  static boolean isJSONValid(String test) {
+        try {
+            new JSONObject(test);
+        } catch (JSONException ex) {
+            try {
+                new JSONArray(test);
+            } catch (JSONException ex1) {
+                return false;
+            }
+        }
+        return true;
+    }
 
 }

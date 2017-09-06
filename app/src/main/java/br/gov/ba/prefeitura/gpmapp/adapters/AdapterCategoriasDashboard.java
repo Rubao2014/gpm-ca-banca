@@ -76,14 +76,14 @@ public class AdapterCategoriasDashboard extends RecyclerView.Adapter implements 
             //Seta o titulo da categoria
             holderCategorias.lblNomeCategoria.setText(categoriasServicos.sNomeCategoria);
 
-            //Se for a carta de servicos #1
-            if ( categoriasServicos.sNomeCategoria.equals(context.getString(R.string.nome_servico_carta)) )
+            //Se for SEDUC #1
+            if ( categoriasServicos.sNomeCategoria.equals(context.getString(R.string.nome_servico_educacao)) )
             {
                 //Se for ativo
                 if ( categoriasServicos.bAtivo )
                 {
                     //seta o icone do menu
-                    holderCategorias.imgCategoria.setImageResource(R.mipmap.oca_ac);
+                    holderCategorias.imgCategoria.setImageResource(R.mipmap.educacao);
                     holderCategorias.lblNomeCategoria.setTextColor(ContextCompat.getColor(context, R.color.preto));
                 }
                 /*else
@@ -94,14 +94,14 @@ public class AdapterCategoriasDashboard extends RecyclerView.Adapter implements 
                 }*/
             }
 
-            //Se for Detran #2
-            if ( categoriasServicos.sNomeCategoria.equals(context.getString(R.string.nome_servico_detran)) )
+            //Se for SEFAZ #2
+            if ( categoriasServicos.sNomeCategoria.equals(context.getString(R.string.nome_servico_sefaz)) )
             {
                 //Se for ativo
                 if ( categoriasServicos.bAtivo )
                 {
                     //seta o icone do menu
-                    holderCategorias.imgCategoria.setImageResource(R.mipmap.detran_ac_2);
+                    holderCategorias.imgCategoria.setImageResource(R.mipmap.sefaz);
                     holderCategorias.lblNomeCategoria.setTextColor(ContextCompat.getColor(context, R.color.preto));
                 }
                 /*
@@ -113,14 +113,14 @@ public class AdapterCategoriasDashboard extends RecyclerView.Adapter implements 
                 }
                 */
             }
-            //Se for SEFAZ #3
-            if ( categoriasServicos.sNomeCategoria.equals(context.getString(R.string.nome_servico_sefaz)) )
+            //Se for TRANSITO #3
+            if ( categoriasServicos.sNomeCategoria.equals(context.getString(R.string.nome_servico_detran)) )
             {
                 //Se for ativo
                 if ( categoriasServicos.bAtivo )
                 {
                     //seta o icone do menu
-                    holderCategorias.imgCategoria.setImageResource(R.mipmap.sefaz);
+                    holderCategorias.imgCategoria.setImageResource(R.mipmap.transporte);
                     holderCategorias.lblNomeCategoria.setTextColor(ContextCompat.getColor(context, R.color.preto));
                 }
                 /*

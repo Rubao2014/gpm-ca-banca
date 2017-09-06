@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+
+    <TextView
+        android:text="@string/custom_list_view_label_num_matricula"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView6"
+        android:textSize="8sp"
+        tools:textColor="?android:attr/textColorSecondaryInverseNoDisable"
+        android:layout_alignTop="@+id/imageViewStatus"
+        android:layout_alignStart="@+id/textViewContractNumber" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textViewContractNumber"
+        android:layout_alignTop="@+id/imageViewStatus"
+        android:text="@string/custom_list_view_label_num_matricula"
+        android:textSize="8sp"
+        tools:textColor="?android:attr/textColorSecondaryInverseNoDisable" />
+
+    <TextView
+        android:text="20160114460"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="39dp"
+        android:id="@+id/textViewContractNumber"
+        android:gravity="center_vertical"
+        android:layout_below="@+id/textView6"
+        android:layout_toEndOf="@+id/imageViewStatus"
+        android:layout_alignBottom="@+id/imageViewStatus" />
+
+
+    <ImageView
+        android:id="@+id/imageViewStatus"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="6dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="6dp"
+        app:srcCompat="@drawable/form" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginEnd="28dp"
+        android:scaleY="0.50"
+        app:srcCompat="@drawable/next"
+        tools:scaleX="0.50"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignBottom="@+id/textViewContractNumber" />
+</RelativeLayout>

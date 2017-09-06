@@ -243,9 +243,10 @@ public class FrmDashboard extends ActivityBase implements IComunicacaoGeral, Dia
         //Adiciona os serviços
         //arrCategorias.add(new CategoriasServicos(getString(R.string.nome_servico_atualizacao_cadastral), false, false));
         //SEFAZ
+        //arrCategorias.add(new CategoriasServicos(getString(R.string.nome_servico_sefaz), true, false));
+        arrCategorias.add(new CategoriasServicos(getString(R.string.nome_servico_educacao), true, false));
         arrCategorias.add(new CategoriasServicos(getString(R.string.nome_servico_sefaz), true, false));
         arrCategorias.add(new CategoriasServicos(getString(R.string.nome_servico_detran), true, false));
-        arrCategorias.add(new CategoriasServicos(getString(R.string.nome_servico_carta), true, false));
 
         //Se tiver retorno
         /*
@@ -337,9 +338,9 @@ public class FrmDashboard extends ActivityBase implements IComunicacaoGeral, Dia
         MASUser masuserUsuario = null;
         CategoriasServicos categoriasServicos = null;
 
-        //SEFAZ -AC
+        //MATRICULA
         if (iPosicao == 0) {
-            intent = new Intent(this, FrmSefazDae.class);
+            intent = new Intent(this, FrmSeducMatriculaEscolarInicio.class);
             startActivity(intent);
         }
 
