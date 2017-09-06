@@ -1,6 +1,6 @@
 <resources>
     <!-- Nome do sistema -->
-    <string name="app_name">APM</string>
+    <string name="app_name">Salvador na Palma da Mão</string>
     <string name="configuracao_conexao_ca">msso_config.json</string>
     <string name="url_conexao_gateway">https://apigateway.gpm.solutions:8443/</string>
     <string name="url_conexao_gateway_ca">https://apigateway.gpm.solutions:8443/</string>
@@ -64,7 +64,7 @@
 
     <!-- Menu Lateral -->
     <string name="label_menu_lateral_titulo">MENU</string>
-    <string name="botao_menu_lateral_sair">Sair do APM</string>
+    <string name="botao_menu_lateral_sair">Sair do SPM</string>
     <string name="botao_menu_lateral_meus_dados">Meus Dados</string>
     <string name="botao_menu_lateral_configuracoes">Configurações</string>
     <string name="botao_menu_lateral_ultimos_acessos">Últimos Acessos</string>
