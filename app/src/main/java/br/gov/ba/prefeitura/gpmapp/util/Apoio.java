@@ -3101,6 +3101,47 @@ public class Apoio
         return sNome;
     }
 
+    public static String retornaJustificativa(String sCodigo) {
+        String sNome = "";
+
+        //Se for 0
+        if (sCodigo.equals("1")) {
+            sNome = "Desistência da vaga pelo responsável";
+        }
+        else if(sCodigo.equals("2")){
+            sNome = "Não comprovou critério do Bolsa Família";
+        }
+        else if(sCodigo.equals("3"))
+        {
+            sNome = "Não comprovou critério de Deficiência";
+        }
+        else if(sCodigo.equals("4"))
+        {
+            sNome = "Não comprovou critério de Gêmeos";
+
+        }
+        else if(sCodigo.equals("5"))
+        {
+            sNome = "Impossibilidade de contato com responsável";
+        }
+        else
+            sNome = "";
+        return sNome;
+    }
+
+    public static String retornaStatus(String sCodigo) {
+        String sNome = "";
+
+        //Se for 0
+        if (sCodigo.equals("1")) {
+            sNome = "Matriculado!";
+        }
+        else
+            sNome = "Não Matriculado!";
+
+        return sNome;
+    }
+
     /**
      * Retorna a descrição do tipo de dependente pelo código
      */

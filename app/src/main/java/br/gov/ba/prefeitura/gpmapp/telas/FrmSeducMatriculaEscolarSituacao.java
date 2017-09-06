@@ -202,17 +202,17 @@ public class FrmSeducMatriculaEscolarSituacao extends ActivityBase implements Vi
         Log.v("Ano:", m.getTxtAnoInscricaoValue());
 
         txtInscricaoValue.setText(m.getInscricaoValue());
-        txtStatusValue.setText(m.getStatusValue());
+        txtStatusValue.setText(Apoio.retornaStatus(m.getStatusValue()));
         txtAnoInscricaoValue.setText(m.getTxtAnoInscricaoValue());
         txtNomeAlunoValue.setText(m.getTxtNomeAlunoValue());
         txtNomeResponsavel01value.setText(m.getTxtNomeResponsavel01value());
         txtNomeResponsavel02value.setText(m.getTxtNomeResponsavel02value());
-        txtDataNascimentoValue.setText(m.getTxtDataNascimentoValue());
+        txtDataNascimentoValue.setText(Apoio.parseData(m.getTxtDataNascimentoValue().substring(0,10),"yyyy-MM-dd","dd/MM/yyyy"));
         txtEscolaValue.setText(m.getTxtEscolaValue());
         txtSerieValue.setText(m.getTxtSerieValue());
         txtBolsaFamiliaValue.setText(Apoio.retornaAtivoOuNao(m.getTxtBolsaFamiliaValue()));
         txtIrmaoGemeoValue.setText(Apoio.retornaAtivoOuNao(m.getTxtIrmaoGemeoValue()));
-        txtJustificativaValue.setText(m.getTxtJustificativaValue());
+        txtJustificativaValue.setText(Apoio.retornaJustificativa(m.getTxtJustificativaValue()));
 
     }
 
