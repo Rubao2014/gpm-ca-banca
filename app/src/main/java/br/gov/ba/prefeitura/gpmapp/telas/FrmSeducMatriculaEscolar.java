@@ -793,7 +793,6 @@ public class FrmSeducMatriculaEscolar extends ActivityBase implements View.OnCli
             LogTrace.escreve(Apoio.localErro(getClass(), throwable), Apoio.getPathLogsSDCard(this), Apoio.getArqErr());
 
             //Se for o tipo de comunicacao meus dados
-            if (( iTipoComunicacao == Apoio.TIPO_COMUNICACAO_EDUCACAO_SERIES ) || ( iTipoComunicacao == Apoio.TIPO_COMUNICACAO_MEUS_DADOS ))
             {
                 //Seta com sucesso
                 bSucesso = false;

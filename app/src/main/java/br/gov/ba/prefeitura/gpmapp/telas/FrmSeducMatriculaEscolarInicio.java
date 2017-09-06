@@ -41,6 +41,7 @@ import br.gov.ba.prefeitura.gpmapp.util.IRetornoMASCallbackJSON;
 import br.gov.ba.prefeitura.gpmapp.util.LogTrace;
 import br.gov.ba.prefeitura.gpmapp.util.RetornoMASCallbackJSON;
 import br.gov.ba.prefeitura.gpmapp.util.RetornoMASConnectionListener;
+import br.gov.ba.prefeitura.gpmapp.util.ValidarCPF;
 
 /**
  * Classe FrmCadastroSenha
@@ -168,6 +169,33 @@ public class FrmSeducMatriculaEscolarInicio extends ActivityBase implements View
         inscricaoCorrente = new String();
     }
 
+    private void obtemDadosCadastroUsuario() throws Exception
+    {
+        MobileSso mobileSso = null;
+        URI uri = null;
+        MASRequest masrequestDados = null;
+        MASRequest.MASRequestBuilder builder = null;
+
+        //Cria o dialogo e exibe mensagem
+        progressDialogMeusDados = Apoio.criarProgressDialog(this);
+        Apoio.progressDialogMensagem(progressDialogMeusDados, getString(R.string.msg_meus_dados_obtendo));
+
+        //Define o tipo da comunicação
+        iTipoComunicacao = Apoio.TIPO_COMUNICACAO_MEUS_DADOS;
+
+        //Obtem a instancia da comunicação via SSO
+        mobileSso = MobileSsoFactory.getInstance(this);
+
+        //Realiza a chamada da comunicação na URL de obtenção das chaves de permissão
+        uri = mobileSso.getURI(getString(R.string.url_conexao_gateway) + "cidadao/v1/pessoas/eu");
+        builder = new MASRequest.MASRequestBuilder(uri);
+        builder.header("Content-Type", "application/json");
+
+        //Constroi a URL de envio e faz a chamada
+        masrequestDados = builder.connectionListener(new RetornoMASConnectionListener()).build();
+        MAS.invoke(masrequestDados, new RetornoMASCallbackJSON(this));
+    }
+
     private void obtemDadosInscricoes() throws Exception
     {
         MobileSso mobileSso = null;
@@ -191,7 +219,7 @@ public class FrmSeducMatriculaEscolarInicio extends ActivityBase implements View
 
          */
 
-        uri = mobileSso.getURI(getString(R.string.url_conexao_gateway) + "gpm/ba/spm/smec/matesc/v1/minhas_inscricoes?cpf=286.883.638-03");
+        uri = mobileSso.getURI(getString(R.string.url_conexao_gateway) + "gpm/ba/spm/smec/matesc/v1/minhas_inscricoes?cpf="+ ValidarCPF.imprimeCPF(sCpf));
         builder = new MASRequest.MASRequestBuilder(uri);
         builder.header("Content-Type", "application/json");
 
@@ -215,9 +243,8 @@ public class FrmSeducMatriculaEscolarInicio extends ActivityBase implements View
     {
 
         //Obtem os dados de cadastro do usuário
-        obtemDadosInscricoes();
+        obtemDadosCadastroUsuario();
 
-        //attemptListMatriculas();
 
     }
 
@@ -403,7 +430,7 @@ public class FrmSeducMatriculaEscolarInicio extends ActivityBase implements View
             Apoio.fecharProgressDialog(progressDialogMeusDados);
 
             //Se for o tipo de comunicacao meus dados
-            if ( iTipoComunicacao == Apoio.TIPO_COMUNICACAO_EDUCACAO )
+            if (( iTipoComunicacao == Apoio.TIPO_COMUNICACAO_EDUCACAO ) || ( iTipoComunicacao == Apoio.TIPO_COMUNICACAO_MEUS_DADOS ))
             {
                 //Armazena o retorno
                 jsonObjectRetornoDados = masresponseObjeto.getBody().getContent();
@@ -482,6 +509,22 @@ public class FrmSeducMatriculaEscolarInicio extends ActivityBase implements View
                     else
                     {
                         // faz nada aind...
+                    }
+                }
+                //Se for os serviços
+                if ( iTipoComunicacao == Apoio.TIPO_COMUNICACAO_MEUS_DADOS )
+                {
+                    //Se for sucesso
+                    if ( bSucesso )
+                    {
+                        //Preenche os dados do usuário
+                        preencheDadosUsuario();
+                        //Obtem os dados de cadastro do usuário
+                        obtemDadosInscricoes();
+                    }
+                    else
+                    {
+                        //Limpa a tela
                     }
                 }
             }

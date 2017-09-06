@@ -346,13 +346,13 @@ public class FrmDashboard extends ActivityBase implements IComunicacaoGeral, Dia
 
         //DETRAN-AC
         if (iPosicao == 1) {
-            intent = new Intent(this, FrmDetran.class);
-            startActivity(intent);
+            //intent = new Intent(this, FrmDetran.class);
+            //startActivity(intent);
         }
         //OCA-AC
         if (iPosicao == 2) {
-            intent = new Intent(this, FrmOca.class);
-            startActivity(intent);
+            //intent = new Intent(this, FrmOca.class);
+            //startActivity(intent);
         }
     }
 
