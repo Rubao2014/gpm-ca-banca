@@ -129,7 +129,7 @@
                                     android:layout_width="match_parent"
                                     android:layout_alignParentTop="true"
                                     android:layout_alignParentStart="true"
-                                    android:id="@+id/listViewMatriculasList"
+                                    android:id="@+id/listViewBeneficiarios"
                                     android:layout_height="300dp"
                                      />
 

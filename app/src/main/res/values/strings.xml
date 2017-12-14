@@ -1,9 +1,10 @@
 <resources>
     <!-- Nome do sistema -->
-    <string name="app_name">Salvador na Palma da Mão</string>
+    <string name="app_name">GPM Alagoas</string>
     <string name="configuracao_conexao_ca">msso_config.json</string>
     <string name="url_conexao_gateway">https://apigateway.gpm.solutions:8443/</string>
     <string name="url_conexao_gateway_ca">https://apigateway.gpm.solutions:8443/</string>
+    <string name="url_conexao_gateway_interno">https://gpm.itec.al.gov.br:8443/</string>
 
     <!-- Todas as palavras -->
     <string name="voltar">Voltar</string>
@@ -21,11 +22,13 @@
     <string name="toolbar_meus_dados">Meus Dados</string>
     <string name="toolbar_carta_servicos">Carta de Serviços</string>
     <string name="toolbar_detran">Detran-AC</string>
+    <string name="toolbar_semarh">SEMARH-AL</string>
     <string name="toolbar_atualizacao_cadastral">Atualização Cadastral</string>
     <string name="toolbar_cadastrar_dependentes">Cadastrar Dependentes</string>
     <string name="toolbar_cadastrar_cursos">Cadastrar Cursos</string>
     <string name="toolbar_gerar_dae">Gere a sua guia</string>
     <string name="toolbar_seduc">Educação</string>
+    <string name="toolbar_ipaseal">Assistencia Saúde - IPASEAL</string>
 
 
     <!-- Todos os menus -->
@@ -92,6 +95,8 @@
     <string name="nome_servico_detran">Transito</string>
     <string name="nome_servico_sefaz">Impostos</string>
     <string name="nome_servico_educacao">Matricula</string>
+    <string name="nome_servico_ipaseal">IPASEAL</string>
+    <string name="nome_servico_semarh">SEMARH</string>
 
 
     <!-- Cadastro CPF -->
@@ -470,5 +475,21 @@
     <string name="custom_list_view_label_num_matricula">Número da Inscrição</string>
 
 
+  <!-- SEMARH - AL-->
+    <string name="hint_semarh_seu_tempo">Seu Tempo</string>"
+    <string name="tablayout_semarh_regiao_litoral">Litoral</string>
+    <string name="msg_semarh_buscar_previsao">Buscando previsão...</string>
+
+
+
+    <!-- IPASEAL -->
+    <string name="label_ipaseal_consulta">Situação Cadastral</string>
+    <string name="botao_consultar">Consultar</string>
+    <string name="hint_ipaseal_matricula">Matricula</string>
+    <string name="msg_ipaseal_obtendo">Aguarde. Obtendo situação ...</string>
+    <string name="msg_ipaseal_enviando">Enviando ...</string>
+    <string name="custom_list_view_beneficiario_nome">Nome</string>
+    <string name="custom_list_view_beneficiario_po">Odontologico</string>
+    <string name="custom_list_view_beneficiario_situacao">Situacao</string>
 
 </resources>

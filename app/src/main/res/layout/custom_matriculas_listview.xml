@@ -14,7 +14,7 @@
         android:textSize="8sp"
         tools:textColor="?android:attr/textColorSecondaryInverseNoDisable"
         android:layout_alignTop="@+id/imageViewStatus"
-        android:layout_alignStart="@+id/textViewContractNumber" />
+        android:layout_alignStart="@+id/textViewNome" />
 
     <TextView
         android:id="@+id/textView3"
@@ -28,7 +28,7 @@
         android:layout_alignStart="@+id/textView6" />
 
     <TextView
-        android:id="@+id/textViewContractNumber"
+        android:id="@+id/textViewNome"
         android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:gravity="center_vertical"

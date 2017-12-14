@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+
+    <TextView
+        android:id="@+id/textViewNome"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textView8"
+        android:layout_alignTop="@+id/imageViewStatus"
+        android:layout_toEndOf="@+id/imageViewStatus"
+        android:gravity="center_vertical"
+        android:text="Joao da Silva"
+        android:textSize="12sp" />
+
+
+    <ImageView
+        android:id="@+id/imageViewStatus"
+        android:layout_width="64dp"
+        android:layout_height="32dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="6dp"
+        app:srcCompat="@mipmap/cartao" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/imageViewStatus"
+        android:layout_toEndOf="@+id/imageViewStatus"
+        android:text="Plano Odontologico"
+        android:textSize="8sp" />
+
+    <TextView
+        android:id="@+id/textViewPO"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textView8"
+        android:layout_below="@+id/textViewNome"
+        android:layout_marginStart="11dp"
+        android:layout_toEndOf="@+id/textView8"
+        android:text="Não"
+        android:textSize="8sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/textViewNome"
+        android:layout_below="@+id/textViewNome"
+        android:layout_marginEnd="53dp"
+        android:text="Situação"
+        android:textSize="8sp" />
+
+    <TextView
+        android:id="@+id/textViewSituacao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/textViewNome"
+        android:layout_alignStart="@+id/textView11"
+        android:layout_below="@+id/textViewNome"
+        android:layout_marginStart="38dp"
+        android:text="Bloqueado"
+        android:textAlignment="viewEnd"
+        android:textSize="8sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>

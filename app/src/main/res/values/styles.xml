@@ -49,6 +49,13 @@
         <item name="android:textColor">@color/branco</item>
     </style>
 
+    <style name="BotoesInline">
+        <item name="android:background">@color/branco</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
+
+
     <style name="TextoItensMenu">
         <item name="android:textColor">@color/branco</item>
         <item name="android:textSize">@dimen/tamanho_texto_menu</item>
