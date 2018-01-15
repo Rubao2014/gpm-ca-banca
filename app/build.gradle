@@ -4,7 +4,7 @@ android {
     compileSdkVersion 25
     buildToolsVersion '27.0.1'
     defaultConfig {
-        applicationId 'br.gov.al.itec.gpmapp'
+        applicationId 'br.com.ca.gpmcaieapp'
         minSdkVersion 19
         targetSdkVersion 25
         versionCode 1
