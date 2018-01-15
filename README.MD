@@ -1,2 +1,2 @@
-GPM for Prefeitura Municipal de Salvador
+GPM for Innovation Week
 V1.0
