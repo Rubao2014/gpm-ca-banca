@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/branco"
@@ -17,15 +18,16 @@
 
         <TextView
             android:id="@+id/textView"
-            android:layout_width="@dimen/tamanho_logo_sect_horizontal"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="86dp"
             android:layout_weight="20"
             android:fontFamily="arial"
             android:paddingTop="20dp"
-            android:text="Instituto de Tecnologia em Informática e Informação do Estado de Alagoas"
+            android:text=""
             android:textAlignment="center"
             android:textSize="14sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            tools:text="@string/splash_label_titulo" />
 
        <!-- <ImageView
             android:layout_width="@dimen/tamanho_logo_sect_horizontal"
@@ -45,7 +47,7 @@
         <ImageView
             android:layout_width="@dimen/tamanho_logo_al_horizontal"
             android:layout_height="@dimen/tamanho_logo_al_vertical"
-            app:srcCompat="@drawable/governoalagoas" />
+            app:srcCompat="@drawable/iw_logo" />
 
     </LinearLayout>
 

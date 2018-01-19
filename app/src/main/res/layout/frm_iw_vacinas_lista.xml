@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/branco"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="@style/AppToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        app:title="Vacinas" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/espaco_tela"
+        android:paddingRight="@dimen/espaco_tela"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/tamanho_zero"
+            android:layout_weight="12"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                style="@style/TextoTituloTelas"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/tamanho_label_clique"
+                android:layout_marginTop="15dp"
+                android:gravity="center_vertical"
+                android:text="Campanhas Públicas de Vacinação" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/tamanho_zero"
+            android:layout_weight="3"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/tamanho_faixa"
+                android:layout_marginRight="30dp"
+                android:background="@color/colorPrimary" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/tamanho_faixa"
+                android:layout_marginLeft="30dp"
+                android:background="@color/colorPrimaryDark" />
+
+        </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/tamanho_zero"
+                android:layout_weight="70"
+                android:gravity="center_horizontal|top"
+                android:orientation="vertical">
+
+                <!-- EDITTEXT DATA VENCIMENTO -->
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/sv01"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <!--
+                                                <android.support.design.widget.TextInputLayout
+                                                    android:id="@+id/inputCNPJOrgaoConveniado"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:layout_marginTop="10dp">
+
+                                                    <EditText
+                                                        android:id="@+id/txtCNPJOrgaoConveniado"
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="wrap_content"
+                                                        android:editable="false"
+                                                        android:hint="@string/label_sefazdae_cnpj_orgao"
+                                                        android:inputType="number"
+                                                        android:linksClickable="false"
+                                                        android:longClickable="false"
+                                                        android:maxLength="30"
+                                                        android:selectAllOnFocus="true"
+                                                        android:singleLine="true"
+                                                        android:text="04.034.484/0001-40" >
+                                                </android.support.design.widget.TextInputLayout>
+                        -->
+                        <!--
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/inputTipo"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="10dp">
+
+                            <EditText
+                                android:id="@+id/txtTipo"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/label_sefazdae_tipo_documento"
+                                android:inputType="number"
+                                android:maxLength="30"
+                                android:selectAllOnFocus="true"
+                                android:singleLine="true" />
+                        </android.support.design.widget.TextInputLayout>
+-->
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <ListView
+                                android:id="@+id/listViewVacinas"
+                                android:layout_width="match_parent"
+                                android:layout_height="300dp"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentTop="true" />
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:id="@+id/sv02"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="15"
+                            android:gravity="center_horizontal|bottom"
+                            android:orientation="vertical">
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </ScrollView>
+
+                <TextView
+                    android:id="@+id/textView2"
+                    style="@style/TextoTelas"
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="12"
+                    android:gravity="center"
+                    android:text="Assina-le as vacinas que tomou"
+                    android:textAlignment="center"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

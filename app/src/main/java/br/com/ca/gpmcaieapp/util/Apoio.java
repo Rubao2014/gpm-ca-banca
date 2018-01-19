@@ -51,6 +51,11 @@ public class Apoio
     public static final String PREFS_MANTER_CONECTADO = "prefs_manter_conectado";
     public static final String PREFS_TOKEN = "prefs_token";
 
+
+    // Constantes de preferencias de cadastro
+    public static final String PREFS_ID_CNS = "prefs_id_cns";
+    public static final String PREFS_ID_CPF = "prefs_id_cpf";
+
     // Constantes de preferencias de cadastro
     public static final String PREFS_CADASTRO_NOME = "prefs_cadastro_nome";
     public static final String PREFS_CADASTRO_CPF = "prefs_cadastro_cpf";
@@ -59,7 +64,8 @@ public class Apoio
     public static final String PREFS_CADASTRO_EMAIL = "prefs_cadastro_email";
     public static final String PREFS_CADASTRO_SENHA = "prefs_cadastro_senha";
     public static final String PREFS_CADASTRO_SEXO = "prefs_cadastro_sexo";
-
+    public static final String PREFS_CADASTRO_CNS = "prefs_cadastro_cns";
+    public static final String PREFS_CADASTRO_CNH = "prefs_cadastro_cnh";
 
     //Constantes de preferencia Sefaz
     public static final String PREFS_SEFAZ_DATA_VENCIMENTO = "prefs_sefaz_data_vencimento";
@@ -109,6 +115,11 @@ public class Apoio
     public static final int TIPO_COMUNICACAO_EDUCACAO = 10;
     public static final int TIPO_COMUNICACAO_EDUCACAO_SERIES = 11;
     public static final int TIPO_COMUNICACAO_SAUDE = 12;
+    public static final int TIPO_COMUNICACAO_NUMERO_CNS = 13;
+    public static final int TIPO_COMUNICACAO_VACINAS_CNS = 14;
+    public static final int TIPO_COMUNICACAO_RELACIONAMENTO_CPF_CNH = 15;
+    public static final int TIPO_COMUNICACAO_NUMERO_CNH = 16;
+    public static final int TIPO_COMUNICACAO_MULTAS_CNH = 17;
 
     //Constantes para timeout de comunicação
     public static final int TIME_OUT_COMUNICACAO = 30;

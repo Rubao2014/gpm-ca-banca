@@ -1,6 +1,6 @@
 <resources>
     <!-- Nome do sistema -->
-    <string name="app_name">GPM Alagoas</string>
+    <string name="app_name">GPM Innovation Week</string>
     <string name="configuracao_conexao_ca">msso_config.json</string>
     <string name="url_conexao_gateway">https://apigateway.gpm.solutions:8443/</string>
     <string name="url_conexao_gateway_ca">https://apigateway.gpm.solutions:8443/</string>
@@ -34,11 +34,14 @@
     <!-- Todos os menus -->
     <string name="menu_gravar">&#160;&#160;Gravar</string>
 
+    <!-- Splash -->
+    <string name="splash_label_titulo">CA CyberSecurity and API Management</string>
+
     <!-- Login -->
     <string name="hint_email">E-mail</string>
     <string name="hint_senha">Senha</string>
     <string name="botao_entrar">ENTRAR</string>
-    <string name="botao_registrar">REGISTRE-SE NO APP DO APM</string>
+    <string name="botao_registrar">REGISTRE-SE NO APP DO GPM</string>
     <string name="label_manter_conectado">Mantenha-me conectado</string>
     <string name="label_entrar_mesmo_assim">Entrar mesmo assim</string>
     <string name="label_esqueci_minha_senha">Esqueci minha senha!</string>
@@ -54,8 +57,8 @@
     <string name="msg_lembrete_logout">Aguarde. Entrando como visitante ...</string>
 
     <!-- Cadastro Inicio -->
-    <string name="label_participe_gpm">Participe do APM</string>
-    <string name="label_dados_participacao">Por meio do cadastro, você concorda com nossos <b>Termos do APM</b> e que você leu as nossas Politicas de Privacidade, incluindo o nosso uso de Cookies. Você poderá receber notificações de SMS do APM e poderá desliga-la a qualquer momento.</string>
+    <string name="label_participe_gpm">Participe do GPM</string>
+    <string name="label_dados_participacao">Por meio do cadastro, você concorda com nossos <b>Termos do GPM</b> e que você leu as nossas Politicas de Privacidade, incluindo o nosso uso de Cookies. Você poderá receber notificações de SMS do GPM e poderá desliga-la a qualquer momento.</string>
     <string name="botao_continuar_agora">CONTINUAR AGORA</string>
     <string name="botao_ja_possui_conta">JÁ POSSUI CONTA?</string>
 
@@ -67,7 +70,7 @@
 
     <!-- Menu Lateral -->
     <string name="label_menu_lateral_titulo">MENU</string>
-    <string name="botao_menu_lateral_sair">Sair do SPM</string>
+    <string name="botao_menu_lateral_sair">Sair do GPM</string>
     <string name="botao_menu_lateral_meus_dados">Meus Dados</string>
     <string name="botao_menu_lateral_configuracoes">Configurações</string>
     <string name="botao_menu_lateral_ultimos_acessos">Últimos Acessos</string>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/coordinatorLayoutMain"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -14,15 +15,16 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="@dimen/tamanho_zero"
+            android:layout_height="7dp"
             android:layout_weight="25"
-            android:orientation="vertical"
-            android:gravity="center">
+            android:background="@android:color/holo_blue_dark"
+            android:gravity="center"
+            android:orientation="vertical">
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@mipmap/logogpmcolorida4" />
+                android:layout_width="132dp"
+                android:layout_height="60dp"
+                android:src="@drawable/gpm_transparent" />
 
         </LinearLayout>
 

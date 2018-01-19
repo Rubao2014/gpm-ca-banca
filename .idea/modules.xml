@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/GPM-CA-IE.iml" filepath="$PROJECT_DIR$/GPM-CA-IE.iml" />
+      <module fileurl="file://C:\Users\brelu01\StudioProjects\gpmcaie\GPM-CA-IE.iml" filepath="C:\Users\brelu01\StudioProjects\gpmcaie\GPM-CA-IE.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gpmcaie.iml" filepath="$PROJECT_DIR$/gpmcaie.iml" />
     </modules>
   </component>
 </project>

@@ -106,7 +106,7 @@ public class FrmSeducMatriculaEscolarSituacao extends ActivityBase implements Vi
         /*
           [RUBENS] Para fins de testes somente
          */
-        //refresh((String) DUMMY_JSON);
+        //carregaVacinas((String) DUMMY_JSON);
     }
 
     /**

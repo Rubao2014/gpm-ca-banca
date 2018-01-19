@@ -77,13 +77,13 @@ public class AdapterCategoriasDashboard extends RecyclerView.Adapter implements 
             holderCategorias.lblNomeCategoria.setText(categoriasServicos.sNomeCategoria);
 
             //Se for SEMARH #1
-            if ( categoriasServicos.sNomeCategoria.equals(context.getString(R.string.nome_servico_semarh)) )
+            if ( categoriasServicos.sNomeCategoria.equals("MULTAS") )
             {
                 //Se for ativo
                 if ( categoriasServicos.bAtivo )
                 {
                     //seta o icone do menu
-                    holderCategorias.imgCategoria.setImageResource(R.mipmap.meio_ambiente);
+                    holderCategorias.imgCategoria.setImageResource(R.drawable.dshbrd_transp_penalty);
                     holderCategorias.lblNomeCategoria.setTextColor(ContextCompat.getColor(context, R.color.preto));
                 }
                 /*else
@@ -95,13 +95,13 @@ public class AdapterCategoriasDashboard extends RecyclerView.Adapter implements 
             }
 
             //Se for SEFAZ #2
-            if ( categoriasServicos.sNomeCategoria.equals(context.getString(R.string.nome_servico_ipaseal)) )
+            if ( categoriasServicos.sNomeCategoria.equals("VACINAS") )
             {
                 //Se for ativo
                 if ( categoriasServicos.bAtivo )
                 {
                     //seta o icone do menu
-                    holderCategorias.imgCategoria.setImageResource(R.mipmap.saude);
+                    holderCategorias.imgCategoria.setImageResource(R.drawable.dshbrd_syringe);
                     holderCategorias.lblNomeCategoria.setTextColor(ContextCompat.getColor(context, R.color.preto));
                 }
                 /*

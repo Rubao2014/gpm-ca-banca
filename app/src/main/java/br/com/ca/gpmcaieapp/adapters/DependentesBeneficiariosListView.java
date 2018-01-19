@@ -51,7 +51,7 @@ public class DependentesBeneficiariosListView extends ArrayAdapter<String> {
     public View getView(int position, View convertView, ViewGroup parent) {
         LayoutInflater inflater = context.getLayoutInflater();
         View listViewItem = inflater.inflate(R.layout.custom_dependentes_beneficiarios_listview, null, true);
-        TextView textViewName = (TextView) listViewItem.findViewById(R.id.textViewNome);
+        TextView textViewName = (TextView) listViewItem.findViewById(R.id.txtVaciDesc);
         TextView textViewPO = (TextView) listViewItem.findViewById(R.id.textViewPO);
         TextView textViewSituacao = (TextView) listViewItem.findViewById(R.id.textViewSituacao);
 

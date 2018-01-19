@@ -95,6 +95,18 @@
         <activity android:name="br.com.ca.gpmcaieapp.telas.FrmIpasealInicio"
             android:screenOrientation="portrait" />
 
+        <activity android:name="br.com.ca.gpmcaieapp.telas.FrmIWVacinasCNS"
+            android:screenOrientation="portrait" />
+
+        <activity android:name="br.com.ca.gpmcaieapp.telas.FrmIWVacinasLista"
+            android:screenOrientation="portrait" />
+
+        <activity android:name="br.com.ca.gpmcaieapp.telas.FrmIWMultasCNH"
+            android:screenOrientation="portrait" />
+
+        <activity android:name="br.com.ca.gpmcaieapp.telas.FrmIWMultasLista"
+            android:screenOrientation="portrait" />
+
     </application>
 
 </manifest>

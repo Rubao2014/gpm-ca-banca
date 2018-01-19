@@ -44,10 +44,12 @@ import br.com.ca.gpmcaieapp.base.IComunicacaoGeral;
 import br.com.ca.gpmcaieapp.base.ActivityBase;
 import br.com.ca.gpmcaieapp.util.Apoio;
 import br.com.ca.gpmcaieapp.util.DialogAlerta;
+import br.com.ca.gpmcaieapp.util.IRetornoMASCallbackJSON;
 import br.com.ca.gpmcaieapp.util.IRetornoMASCallbackJSONArray;
 import br.com.ca.gpmcaieapp.util.IRetornoMASCallbackVoid;
 import br.com.ca.gpmcaieapp.util.JSONArrayResponseBody;
 import br.com.ca.gpmcaieapp.util.LogTrace;
+import br.com.ca.gpmcaieapp.util.RetornoMASCallbackJSON;
 import br.com.ca.gpmcaieapp.util.RetornoMASCallbackJSONArray;
 import br.com.ca.gpmcaieapp.util.RetornoMASCallbackVoid;
 import br.com.ca.gpmcaieapp.util.RetornoMASConnectionListener;
@@ -55,7 +57,7 @@ import br.com.ca.gpmcaieapp.util.RetornoMASConnectionListener;
 /**
  * Classe FrmDashboard
  */
-public class FrmDashboard extends ActivityBase implements IComunicacaoGeral, DialogInterface.OnClickListener, IRetornoMASCallbackVoid, Runnable, TextWatcher, IRetornoMASCallbackJSONArray, View.OnClickListener
+public class FrmDashboard extends ActivityBase implements IComunicacaoGeral, DialogInterface.OnClickListener, IRetornoMASCallbackVoid, Runnable, TextWatcher, IRetornoMASCallbackJSONArray, View.OnClickListener, IRetornoMASCallbackJSON
 {
     // Controles da classe
     private Toolbar toolbar = null;
@@ -73,7 +75,12 @@ public class FrmDashboard extends ActivityBase implements IComunicacaoGeral, Dia
     private ArrayList <CategoriasServicos> arrCategorias = null;
     private int iTipoComunicacao = 0;
     private JSONArray jsonArrayRetornoServicos = null;
+    private JSONObject jsonObjectRetornoDados = null;
     private boolean bSucesso = false;
+
+    private String sCNH = null;
+    private String sCPF = null;
+    private String sNome = null;
 
     @Override
     protected void onCreate(Bundle bundleSavedInstanceState)
@@ -239,10 +246,10 @@ public class FrmDashboard extends ActivityBase implements IComunicacaoGeral, Dia
 
         //instancia o array
         arrCategorias = new ArrayList<CategoriasServicos>();
-        //SERVICO SEMARH - MEIO AMBIENTE E RECURSOS HÍDRICOS
-        arrCategorias.add(new CategoriasServicos(getString(R.string.nome_servico_semarh), true, false));
-        // SERVICO IPASEAL - SAUDE
-        arrCategorias.add(new CategoriasServicos(getString(R.string.nome_servico_ipaseal), true, false));
+        //Servicos de transporte (multas de trânsito)
+        arrCategorias.add(new CategoriasServicos("MULTAS", true, false));
+        //Servicos de saude (campanhas de vacinação)
+        arrCategorias.add(new CategoriasServicos("VACINAS", true, false));
 
 
         //seta o adapter e carrega os itens
@@ -306,6 +313,59 @@ public class FrmDashboard extends ActivityBase implements IComunicacaoGeral, Dia
         startActivity(intent);
     }
 
+
+    private void obtemDadosDoUsuario() throws Exception {
+        MobileSso mobileSso = null;
+        URI uri = null;
+        MASRequest masrequestDados = null;
+        MASRequest.MASRequestBuilder builder = null;
+
+        //Cria o dialogo e exibe mensagem
+        progressDialogDashboard = Apoio.criarProgressDialog(this);
+        Apoio.progressDialogMensagem(progressDialogDashboard, "Analisando CPF. Aguarde...");
+
+        //Define o tipo da comunicação
+        iTipoComunicacao = Apoio.TIPO_COMUNICACAO_MEUS_DADOS;
+
+        //Obtem a instancia da comunicação via SSO
+        mobileSso = MobileSsoFactory.getInstance(this);
+
+        //Realiza a chamada da comunicação na URL de obtenção das chaves de permissão
+        uri = mobileSso.getURI(getString(R.string.url_conexao_gateway) + "cidadao/v1/pessoas/eu");
+        builder = new MASRequest.MASRequestBuilder(uri);
+        builder.header("Content-Type", "application/json");
+
+        //Constroi a URL de envio e faz a chamada
+        masrequestDados = builder.connectionListener(new RetornoMASConnectionListener()).build();
+        MAS.invoke(masrequestDados, new RetornoMASCallbackJSON(this));
+    }
+
+    private void obtemDadosRelacionamentoCPFCNH() throws Exception {
+        MobileSso mobileSso = null;
+        URI uri = null;
+        MASRequest masrequestDados = null;
+        MASRequest.MASRequestBuilder builder = null;
+
+        //Cria o dialogo e exibe mensagem
+        progressDialogDashboard = Apoio.criarProgressDialog(this);
+        Apoio.progressDialogMensagem(progressDialogDashboard, "Verificando Relacionamento. Aguarde...");
+
+        //Define o tipo da comunicação
+        iTipoComunicacao = Apoio.TIPO_COMUNICACAO_RELACIONAMENTO_CPF_CNH;
+
+        //Obtem a instancia da comunicação via SSO
+        mobileSso = MobileSsoFactory.getInstance(this);
+
+        //Realiza a chamada da comunicação na URL de obtenção das chaves de permissão
+        uri = mobileSso.getURI(getString(R.string.url_conexao_gateway) + "iw/transp/cpf_cnh?cpf=" + sCPF);
+        builder = new MASRequest.MASRequestBuilder(uri);
+        builder.header("Content-Type", "application/json");
+
+        //Constroi a URL de envio e faz a chamada
+        masrequestDados = builder.connectionListener(new RetornoMASConnectionListener()).build();
+        MAS.invoke(masrequestDados, new RetornoMASCallbackJSON(this));
+    }
+
     /**
      * Chama a tela de atualização cadastral
      */
@@ -315,16 +375,28 @@ public class FrmDashboard extends ActivityBase implements IComunicacaoGeral, Dia
         MASUser masuserUsuario = null;
         CategoriasServicos categoriasServicos = null;
 
-        //SEMARH
-        if (iPosicao == 0) {
-            intent = new Intent(this, FrmSemarh.class);
-            startActivity(intent);
-        }
-
-        //IPASEAL
-        if (iPosicao == 1) {
-            intent = new Intent(this, FrmIpasealInicio.class);
-            startActivity(intent);
+        switch (iPosicao) {
+            case 0: // Multas
+            {
+                sCNH = Apoio.retornaPrefsValorString(this, Apoio.PREFS_CADASTRO_CNH, null);
+                if (sCNH != null) {
+                    chamaTelaMultasLista();
+                } else {
+                    sCPF = Apoio.retornaPrefsValorString(this, Apoio.PREFS_CADASTRO_CPF, null);
+                    if (sCPF != null) {
+                        obtemDadosRelacionamentoCPFCNH();
+                    } else {
+                        obtemDadosDoUsuario();
+                    }
+                }
+                break;
+            }
+            case 1: // Vacinas
+            {
+                intent = new Intent(this, FrmIWVacinasCNS.class);
+                startActivity(intent);
+                break;
+            }
         }
     }
 
@@ -679,6 +751,66 @@ public class FrmDashboard extends ActivityBase implements IComunicacaoGeral, Dia
         }
     }
 
+
+    @Override
+    public void onSuccess(MASResponse<JSONObject> masresponseObjeto, int iRetorno) {
+        try
+        {
+            // fecha o dialog
+            Apoio.fecharProgressDialog(progressDialogDashboard);
+
+            switch (iTipoComunicacao) {
+                case Apoio.TIPO_COMUNICACAO_MEUS_DADOS: {
+                    //Armazena o retorno
+                    jsonObjectRetornoDados = masresponseObjeto.getBody().getContent();
+                    //Seta com sucesso
+                    bSucesso = true;
+                    //Chama o preenchimento para rodar em thread, pois no retorno do sucesso, não conseguimos acessar os objetos de tela
+                    this.runOnUiThread(this);
+                    break;
+                }
+                case Apoio.TIPO_COMUNICACAO_RELACIONAMENTO_CPF_CNH: {
+                    //Armazena o retorno
+                    jsonObjectRetornoDados = masresponseObjeto.getBody().getContent();
+                    //Seta com sucesso
+                    bSucesso = true;
+                    //Chama o preenchimento para rodar em thread, pois no retorno do sucesso, não conseguimos acessar os objetos de tela
+                    this.runOnUiThread(this);
+                    break;
+                }
+            }
+
+        }
+        catch (Exception err)
+        {
+            LogTrace.escreve(Apoio.localErro(getClass(), err), Apoio.getPathLogsSDCard(this), Apoio.getArqErr());
+            Toast.makeText(this, Apoio.getMsgErr(this.getClass(), err), Toast.LENGTH_LONG).show();
+        }
+    }
+
+    private void parseDadosDoUsuario() throws Exception
+    {
+        sCPF = jsonObjectRetornoDados.getString("cpf");
+        sNome = jsonObjectRetornoDados.getString("nomeCompleto");
+        Apoio.gravaPrefsValorString(this, Apoio.PREFS_CADASTRO_CPF, sCPF);
+    }
+
+    private void parseDadosRelacionamentoCPFCNH() throws Exception {
+        sCNH = jsonObjectRetornoDados.getString("cnh");
+        Apoio.gravaPrefsValorString(this, Apoio.PREFS_CADASTRO_CNH, sCNH);
+    }
+
+    private void chamaTelaMultasCNH() {
+        Intent intent = new Intent(this, FrmIWMultasCNH.class);
+        startActivity(intent);
+    }
+
+    private void chamaTelaMultasLista() {
+        Intent intent = new Intent(this, FrmIWMultasLista.class);
+        startActivity(intent);
+    }
+
+
     @Override
     public void onError(Throwable throwable)
     {
@@ -711,6 +843,18 @@ public class FrmDashboard extends ActivityBase implements IComunicacaoGeral, Dia
                 //Chama o preenchimento para rodar em thread, pois no retorno do sucesso, não conseguimos acessar os objetos de tela
                 this.runOnUiThread(this);
             }
+            else if ( iTipoComunicacao == Apoio.TIPO_COMUNICACAO_RELACIONAMENTO_CPF_CNH )
+            {
+//                //Monta snackbar com erro
+//                snackbarErro = Snackbar.make(coordinatorLayoutDashboard, getString(R.string.msg_dashboard_impossivel_servicos), Snackbar.LENGTH_LONG);
+//                snackbarErro.show();
+
+                //Seta o erro
+                bSucesso = false;
+
+                //Chama o preenchimento para rodar em thread, pois no retorno do sucesso, não conseguimos acessar os objetos de tela
+                this.runOnUiThread(this);
+            }
         }
         catch (Exception err)
         {
@@ -724,18 +868,42 @@ public class FrmDashboard extends ActivityBase implements IComunicacaoGeral, Dia
     {
         try
         {
-            //Se for os serviços
-            if ( iTipoComunicacao == Apoio.TIPO_COMUNICACAO_SERVICOS )
-            {
-                //Se for erro
-                if ( !bSucesso )
-                {
-                    //Zera o json de dados
-                    jsonArrayRetornoServicos = null;
-                }
+            try {
+                switch (iTipoComunicacao) {
+                    case Apoio.TIPO_COMUNICACAO_MEUS_DADOS: {
+                        if (bSucesso) {
+                            parseDadosDoUsuario();
+                            obtemDadosRelacionamentoCPFCNH();
+                        }
+                        break;
+                    }
+                    case Apoio.TIPO_COMUNICACAO_RELACIONAMENTO_CPF_CNH: {
+                        if (bSucesso) {
+                            parseDadosRelacionamentoCPFCNH();
+                            chamaTelaMultasLista();
+                        } else {
+                            chamaTelaMultasCNH();
+                        }
+                        break;
+                    }
+                    case Apoio.TIPO_COMUNICACAO_SERVICOS: {
+                        //Se for erro
+                        if ( !bSucesso )
+                        {
+                            //Zera o json de dados
+                            jsonArrayRetornoServicos = null;
+                        }
+                        //Preenche a lista de serviços
+                        preencheListaServicos();
 
-                //Preenche a lista de serviços
-                preencheListaServicos();
+                        break;
+                    }
+                }
+            }
+            catch(Exception err)
+            {
+                LogTrace.escreve(Apoio.localErro(getClass(), err), Apoio.getPathLogsSDCard(this), Apoio.getArqErr());
+                DialogAlerta.show(this, Apoio.getMsgErr(getClass(), err), getString(R.string.atencao), getString(R.string.ok));
             }
         }
         catch(Exception err)

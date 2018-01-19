@@ -7,7 +7,7 @@
 
 
     <TextView
-        android:id="@+id/textViewNome"
+        android:id="@+id/txtVaciDesc"
         android:layout_width="280dp"
         android:layout_height="wrap_content"
         android:layout_above="@+id/textView8"
@@ -42,7 +42,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/textView8"
-        android:layout_below="@+id/textViewNome"
+        android:layout_below="@+id/txtVaciDesc"
         android:layout_marginStart="11dp"
         android:layout_toEndOf="@+id/textView8"
         android:text="Não"
@@ -53,8 +53,8 @@
         android:id="@+id/textView11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/textViewNome"
-        android:layout_below="@+id/textViewNome"
+        android:layout_alignEnd="@+id/txtVaciDesc"
+        android:layout_below="@+id/txtVaciDesc"
         android:layout_marginEnd="53dp"
         android:text="Situação"
         android:textSize="8sp" />
@@ -63,9 +63,9 @@
         android:id="@+id/textViewSituacao"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/textViewNome"
+        android:layout_alignEnd="@+id/txtVaciDesc"
         android:layout_alignStart="@+id/textView11"
-        android:layout_below="@+id/textViewNome"
+        android:layout_below="@+id/txtVaciDesc"
         android:layout_marginStart="38dp"
         android:text="Bloqueado"
         android:textAlignment="viewEnd"

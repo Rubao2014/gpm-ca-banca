@@ -132,7 +132,7 @@ public class FrmSefazDae extends ActivityBase implements View.OnClickListener, I
         txtMultaDoc = (EditText) findViewById(R.id.txtMultaDoc);
 
 
-        // Create an ArrayAdapter using the string array and a default spinner layout
+        // create an ArrayAdapter using the string array and a default spinner layout
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                 R.array.codigos_e_itens_tributarios, android.R.layout.simple_spinner_item);
 

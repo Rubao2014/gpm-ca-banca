@@ -66,18 +66,18 @@ public class RestCommunication
                 caInput.close();
             }
 
-            // Create a KeyStore containing our trusted CAs
+            // create a KeyStore containing our trusted CAs
             String keyStoreType = KeyStore.getDefaultType();
             KeyStore keyStore = KeyStore.getInstance(keyStoreType);
             keyStore.load(null, null);
             keyStore.setCertificateEntry("ca", ca);
 
-            // Create a TrustManager that trusts the CAs in our KeyStore
+            // create a TrustManager that trusts the CAs in our KeyStore
             String tmfAlgorithm = TrustManagerFactory.getDefaultAlgorithm();
             TrustManagerFactory tmf = TrustManagerFactory.getInstance(tmfAlgorithm);
             tmf.init(keyStore);
 
-            // Create an SSLContext that uses our TrustManager
+            // create an SSLContext that uses our TrustManager
             SSLContext sslcontext = SSLContext.getInstance("TLS");
             sslcontext.init(null, tmf.getTrustManagers(), null);
             //***********************************************************************
@@ -96,9 +96,9 @@ public class RestCommunication
             httpsConn.setAllowUserInteraction(false);
             httpsConn.setRequestProperty("Content-Type", sContentType);
 
-            //Se for para realizar a autorização
-            if ( bAutorizacao )
-            {
+                //Se for para realizar a autorização
+                if ( bAutorizacao )
+                {
                 httpsConn.setRequestProperty("Authorization", "Bearer " + sChaveAutorizacao);
             }
 
